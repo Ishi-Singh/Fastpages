@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Notes",
-            "content": "Week 0 . cd ~: takes you to root directory | cd ..: takes you to previous directory | ls: lists files | code .: opens vs code from terminal | . Week 1 . print(‘’): prints text | def: is sued to define a function | if/else: is used to get an output if certain conditions are true | .",
+            "content": "Week 0 . cd ~ takes you to root directory | . | cd .. -takes you to previous directory | ls lists files | . | code . -opens vs code from terminal | . Week 1 . print(‘’) prints text | . | def is sued to define a function | . | if/else is used to get an output if certain conditions are true | . | .",
             "url": "https://random-ign.github.io/Fastpages/markdown/2022/08/29/notes.html",
             "relUrl": "/markdown/2022/08/29/notes.html",
             "date": " • Aug 29, 2022"
