@@ -1,0 +1,9 @@
+---
+toc: true
+layout: post
+description: Extra Credit Assignment
+categories: [markdown]
+title: Key Insights from the Alumni Panel
+---
+
+Computer science is a diverse community that includes people from various majors ranging from aerospace engineering to mechanical engineering. Although people from other engineering majors may not be taught coding in their curriculum, they will still use it to automate menial tasks through scripting, which allows for the optimization of many tasks. And the thought process behind computer science can also apply to other majors and make one a better problem-solver. Although many people go into computer science because of their interests from a young age, this is not always the case. Some people may find it necessary for future opportunities, while others learn it for convenience. Despite its importance, computer science has many challenging aspects, such as keeping motivated, getting started, and resisting the temptation to write nonsense. Motivation is hard to find when it seems everyone is better and doing more than you. And the advice given for this was to focus on what you are doing, and you need to stay on your own path. Getting started could seem complicated because there may not be a structure, or you may be unable to find a solution. But you don't need the plan to be rigid, and you can Google your question and get the knowledge of those who came before you. And finally, to keep yourself from writing nonsense, you must ensure that no corners are cut, and everything is followed correctly. Overall this panel was really informative and taught me how computer science applies in engineering and how to overcome common challenges many people have.
