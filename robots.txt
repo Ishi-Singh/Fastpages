@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://random-ign.github.io/Fastpages/sitemap.xml
