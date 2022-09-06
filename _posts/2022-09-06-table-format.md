@@ -8,7 +8,12 @@ title: Table
 
 <table>
   <tr>
-    <th>Week 0</th>
+    <th>Week</th>
+    <th>Assignment</th>
+    <th>Issue Link</th>
+  </tr>
+    <tr>
+    <td>Week 0</td>
     <td><a href="(https://nighthawkcoders.github.io/APCSP/techtalk/tools)">Tools and Equipments</a></td>
     <td><a href="(https://github.com/Random-IGN/Fastpages/issues/2)">Hacks Issue</a></td>
   </tr>
