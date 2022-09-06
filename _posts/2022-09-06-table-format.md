@@ -1,5 +1,10 @@
-# Table
-> General table to use to turn in review tickets
+---
+toc: true
+layout: post
+description: This is a general table which would be used to turn in Review Tickets
+categories: [markdown]
+title: Table
+---
 
 <table>
   <tr>
