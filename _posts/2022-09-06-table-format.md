@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: This is a general table which would be used to turn in Review Tickets
+description: This is a general table which has links to assignments and issues
 categories: [markdown]
 title: Table
 ---
