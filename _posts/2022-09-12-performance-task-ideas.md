@@ -8,7 +8,11 @@ title: Making A Performance Task
 
 ## Row 1: Program Purpose and Function
 - Provide results from real world data
-- Creating a simple game
+  - Prices for food
+  - Increase in population within a timespan
+- Creating a simple game with a twist
+  - Pong with 4 players
+  - Tic tac toe but you can capture marked boxes
 - Calculating complex equations
 - Display interesting facts
 - Quizzing players on a topic
