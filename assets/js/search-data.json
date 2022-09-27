@@ -138,6 +138,17 @@
 
   
       ,"page1": {
+          "title": "JavaScript",
+          "content": "Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel . Post that uses HTML fragments and JavaScript data to build a table .",
+          "url": "https://random-ign.github.io/Fastpages//Fastpages/_pages/JavaScript.html",
+          "relUrl": "/_pages/JavaScript.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": "I’m in Del Norte’s graduating class of 2024 and I really like the STEM field. .",
           "url": "https://random-ign.github.io/Fastpages//Fastpages/about/",
@@ -169,7 +180,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://random-ign.github.io/Fastpages//Fastpages/robots.txt",
