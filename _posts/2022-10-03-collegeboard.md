@@ -5,8 +5,9 @@ description: Collection of all the Collegeboard quizzes
 categories: [markdown]
 title: Collegeboard Quizzes
 ---
+## Big Idea 1
 
-## 1.1 Collaboration
+### 1.1 Collaboration
 
 - Increases diversity
 
@@ -20,14 +21,14 @@ title: Collegeboard Quizzes
 
 ![image](https://user-images.githubusercontent.com/82348259/193751019-35d18bbf-b040-4aa5-bf1a-0cf6bf63c719.png)
 
-## 1.2 Program Function and Purpose
+### 1.2 Program Function and Purpose
 
 - Computer innovations are created for a purpose and that purpose guides their developments
 - Helps solve issues
 
 ![image](https://user-images.githubusercontent.com/82348259/193751140-bf6a6261-7415-4303-9892-b0d67c8205ce.png)
 
-## 1.3 Program Design and Development
+### 1.3 Program Design and Development
 
 - Programs starts with an idea and developers follow specific steps to do that
 - How a program is developed
@@ -38,3 +39,5 @@ title: Collegeboard Quizzes
   5. Refining and revising: making changes based on feedback, testing, and reflections
 
 ![image](https://user-images.githubusercontent.com/82348259/193751223-f6697e82-deff-4cb0-ba0c-1024469d23a3.png)
+
+### 1.4 
