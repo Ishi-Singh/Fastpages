@@ -40,4 +40,11 @@ title: Collegeboard Quizzes
 
 ![image](https://user-images.githubusercontent.com/82348259/193751223-f6697e82-deff-4cb0-ba0c-1024469d23a3.png)
 
-### 1.4 
+### 1.4 Identifing and Correcting Errors
+
+- Errors are common in a programming setting
+- Three types of problems
+  1. Logic error: a bug which causes code to run incorrectly
+  2. Syntax error: an error casued by typos, missing code, or code that doesnt follow the rules of the language
+  3. Run-time error: when a program fails when running
+- Programs need ot be tested to ensure they are working as intended
