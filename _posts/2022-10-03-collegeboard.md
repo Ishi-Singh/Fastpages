@@ -48,3 +48,5 @@ title: Collegeboard Quizzes
   2. Syntax error: an error casued by typos, missing code, or code that doesnt follow the rules of the language
   3. Run-time error: when a program fails when running
 - Programs need ot be tested to ensure they are working as intended
+
+![image](https://user-images.githubusercontent.com/82348259/194794780-199f27b1-9b31-4ff0-98e9-25fc0f314824.png)
