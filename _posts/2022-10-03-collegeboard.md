@@ -50,3 +50,73 @@ title: Collegeboard Quizzes
 - Programs need ot be tested to ensure they are working as intended
 
 ![image](https://user-images.githubusercontent.com/82348259/194794780-199f27b1-9b31-4ff0-98e9-25fc0f314824.png)
+
+## Big Idea 2
+
+### 2.1 Binary Numbers
+
+### 2.2 Data Compression
+
+### 2.3 Extracting Information from Data
+
+### 2.4 Using Programs with Data
+
+## Big Idea 3
+
+### 3.1 Variables and Assignments
+
+### 3.2 Data Abstraction
+
+### 3.3 Mathematical Expressions
+
+### 3.4 Strings
+
+### 3.5 Boolean Expressions
+
+### 3.6 Conditionals
+
+### 3.7 Nested Conditionals
+
+### 3.8 Iteration
+
+### 3.9 Developing Algorithms
+
+### 3.10 Lists
+
+### 3.11 Binary Search
+
+### 3.12 Calling Procedures
+
+### 3.13 Developing Procedures
+
+### 3.14 Libraries
+
+### 3.15 Random Values
+
+### 3.16 Simulations
+
+### 3.17 Algorithmic Efficiency
+
+### 3.18 Undecidable Problems
+
+## Big Idea 4
+
+### 4.1 The Internet
+
+### 4.2 Fault Tolerence
+
+### 4.3 Parallel and Distributed Computing
+
+## Big Idea 5
+
+### 5.1 Beneficial and Harmful Effects
+
+### 5.2 Digital Divide
+
+### 5.3 Computing Bias
+
+### 5.4 Crowdsourcing
+
+### 5.5 Legal and Ethical Concerns
+
+### 5.6 Safe Computing
