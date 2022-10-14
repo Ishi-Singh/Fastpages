@@ -103,6 +103,8 @@ title: Collegeboard Quizzes
 
 ### 4.1 The Internet
 
+![image](https://user-images.githubusercontent.com/82348259/195949761-a2395cf7-919a-4e11-bbe6-2caa0eb6427c.png)
+
 ### 4.2 Fault Tolerence
 
 ### 4.3 Parallel and Distributed Computing
