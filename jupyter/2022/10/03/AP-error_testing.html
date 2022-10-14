@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -515,16 +515,19 @@ window.onload = wrap_img;
 <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 
 <span class="k">while</span> <span class="n">item</span> <span class="o">!=</span> <span class="s2">"stop"</span><span class="p">:</span> 
-    <span class="n">total</span> <span class="o">+=</span> <span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+    <span class="c1">#total += menu[item]</span>
     <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please select an item from the menu"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'burger'</span><span class="p">:</span>
-    <span class="n">total</span> <span class="o">+=</span> <span class="mf">3.99</span>
-<span class="k">elif</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'fries'</span><span class="p">:</span>
-    <span class="n">total</span> <span class="o">+=</span> <span class="mf">1.99</span>
-<span class="k">elif</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'drink'</span><span class="p">:</span>
-    <span class="n">total</span> <span class="o">+=</span><span class="mf">0.99</span>
+    <span class="c1">## Indentation important </span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'burger'</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="mf">3.99</span>
+    <span class="k">elif</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'fries'</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="mf">1.99</span>
+    <span class="k">elif</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'drink'</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span><span class="mf">0.99</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Try again"</span><span class="p">)</span>
 
 <span class="c1">#code should add the price of the menu items selected by the user </span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
@@ -544,10 +547,12 @@ window.onload = wrap_img;
 burger  $3.99
 fries  $1.99
 drink  $0.99
-drink
 fries
+pie
+Try again
 stop
-2.98
+Try again
+0
 </pre>
 </div>
 </div>
