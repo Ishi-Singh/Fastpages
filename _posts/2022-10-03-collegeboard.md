@@ -103,6 +103,11 @@ title: Collegeboard Quizzes
 
 ### 4.1 The Internet
 
+- The message is broken into packets and reassembled by the recipient’s device
+  - Packets are small amounts of data sent over anetwork
+  - Includes source and destination of information
+- Open protocols allows data transmission to be standardized
+
 ![image](https://user-images.githubusercontent.com/82348259/195949761-a2395cf7-919a-4e11-bbe6-2caa0eb6427c.png)
 
 ### 4.2 Fault Tolerence
