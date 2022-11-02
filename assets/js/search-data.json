@@ -214,9 +214,6 @@
   
 
   
-  
-
-  
 
   
   
@@ -227,13 +224,20 @@
   
 
   
+
+  
+  
+
+  
+  
+
   
 
   
   
 
   
-      ,"page10": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://random-ign.github.io/Fastpages//Fastpages/robots.txt",
