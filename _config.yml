@@ -122,3 +122,23 @@ kramdown:
 feed:
   posts_limit: 5 #default posts_limit: 10
   excerpt_only: true
+
+
+## Added from CSP Slack
+version: ‘3’
+services:
+  web:
+    image: java_csav2
+    build: .
+    ports:
+      - “8081:8078”
+    volumes:
+      - persistent_volume:/app/volumes
+    restart: unless-stopped
+volumes:
+  persistent_volume:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /home/ubuntu/nighthawk_csa/volumes
