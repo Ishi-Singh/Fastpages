@@ -18,5 +18,5 @@ title: Lesson Plan for 3.14 and 3.15
 
 ## 3.15 Random Value
 
-- Function: random (a, b) → generates a random integer from a to b inclusive. Provides 1 number at a time. Each execution of a random number generator may produce a different result each time. 
+- Function: random (a, b) → generates a random integer from a to b inclusive. Provides 1 number at a time. Each execution of a random number generator may produce a different result each time.
 - Ex. random(1, 5) could return 1, 2, 3, 4, 5
