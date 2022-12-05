@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -142,16 +142,6 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h2"><a href="#Exercise-1">Exercise 1 </a></li>
 <li class="toc-entry toc-h2"><a href="#Exercise-2">Exercise 2 </a></li>
-<li class="toc-entry toc-h2"><a href="#3.6">3.6 </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Practice-Questions">Practice Questions </a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#3.6">3.6 </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Practice-Questions">Practice Questions </a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul><!--
@@ -175,7 +165,7 @@ window.onload = wrap_img;
 <ol>
 <li>2; a is assigned 19 and b was assigned 28 and 19 =/= 28</li>
 <li>1; both score and avaerage are assigned as 99 and 99 ≤ 99</li>
-<li>2; </li>
+<li>2; the type is dog and it has training</li>
 </ol>
 <h3 id="Hacks">
 <a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
@@ -184,12 +174,30 @@ window.onload = wrap_img;
 <ul>
 <li>Using psuedocode operators determine if the statements are true or false. The number type will be indicated in parentheses.</li>
 </ul>
-<ol>
-<li>90(D) = 1000(B); B. False since 1000(B) is the same as 8(D) and 90(D) ≠ 8(D)</li>
-<li>10(D) ≠ 0110(B); A. True since 10(D) is the same as 1010(B)</li>
-<li>56(D) ≥ 111000(B); B. False since 111000(B) = 224(D) and 26(D) &lt; 224(D)</li>
-<li>99(D) &lt; 1110011(B); A. True since 1110011(B) = 115(D) and 99(D) &lt; 115(D)</li>
-</ol>
+<p><strong>1. 90(D) = 1000(B)</strong></p>
+<ul>
+<li>A. True</li>
+<li>B. False
+Answer: B. False; 1000(B) is the same as 8(D) and 90(D) ≠ 8(D)</li>
+</ul>
+<p><strong>2. 10(D) ≠ 0110(B)</strong></p>
+<ul>
+<li>A. True</li>
+<li>B. False
+Answer: A. True; 10(D) is the same as 1010(B)</li>
+</ul>
+<p><strong>3. 56(D) ≥ 111000(B)</strong></p>
+<ul>
+<li>A. True</li>
+<li>B. False
+Answer: B. False; 111000(B) = 224(D) and 26(D) &lt; 224(D)</li>
+</ul>
+<p><strong>4. 99(D) &lt; 1110011(B)</strong></p>
+<ul>
+<li>A. True</li>
+<li>B. False
+Answer: A. True; 1110011(B) = 115(D) and 99(D) &lt; 115(D)</li>
+</ul>
 
 </div>
 </div>
@@ -311,20 +319,40 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># Practice with these statements</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Testing out relational operators</span>
+<span class="c1"># Practice with these statements</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="mi">20</span> <span class="o">==</span> <span class="mi">20</span><span class="p">)</span> <span class="c1"># How can you change the operator to print a value of False?</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">20</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="c1"># How can you change the operator to print a value of False?</span>
+<span class="c1">## Since 20 is not greater than (&gt;) 20 the statement would return as False</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="mi">30</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">z</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span> <span class="c1"># How can this return true by only manipulating the operator?</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span> <span class="c1"># How can this return true by only manipulating the operator?</span>
+<span class="c1">## The operater must be changed from &gt; to == which would make the statement True</span>
 
 <span class="c1"># Manipulate the variables x, y, and z to make the below statement return true</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">z</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">z</span><span class="p">)</span>
+<span class="c1">## Since x is assigned 30 and z is assigned 10 to make the statement True == must be changed to &gt;</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+True
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -377,13 +405,13 @@ window.onload = wrap_img;
 <li>If statement</li>
 <li>If-else statement</li>
 </ol>
-<p>Answer: 2</p>
+<p>Answer: 2; since he will go to the bank IF he has gas ELSE he will go home</p>
 <p><strong>4. What would be most appropriate for this situation? Luke wants to play basketball. If it is sunny outside he will go to the park to play basketball.</strong></p>
 <ol>
 <li>If statement</li>
 <li>If-else statement</li>
 </ol>
-<p>Answer: 1</p>
+<p>Answer: 1; There is only a condition for if and not one for else</p>
 
 </div>
 </div>
@@ -404,19 +432,41 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"lion"</span><span class="p">,</span> <span class="s2">"tiger"</span><span class="p">,</span> <span class="s2">"wildebeest"</span><span class="p">,</span> <span class="s2">"shark"</span><span class="p">,</span> <span class="s2">"jellyfish"</span><span class="p">,</span> <span class="s2">"blobfish"</span><span class="p">,</span> <span class="s2">"raven"</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"lion"</span><span class="p">,</span> <span class="s2">"tiger"</span><span class="p">,</span> <span class="s2">"wildebeest"</span><span class="p">,</span> <span class="s2">"shark"</span><span class="p">,</span> <span class="s2">"jellyfish"</span><span class="p">,</span> <span class="s2">"blobfish"</span><span class="p">,</span> <span class="s2">"raven"</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">"shark"</span><span class="p">:</span> <span class="c1"># What boolean value does this statement cause?</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Fun Fact: The smallest shark is the dwarf lantern shark, and it is small enough to hold in your hand!"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">"wildebeest"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"This animal lives in the desert"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>    
 
 <span class="c1"># Practice</span>
 <span class="c1"># Using only one more if statement, alter the code to print out a statement saying if an animal lives in the desert, based on booleans</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>lion
+tiger
+This animal lives in the desert
+Fun Fact: The smallest shark is the dwarf lantern shark, and it is small enough to hold in your hand!
+jellyfish
+blobfish
+raven
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -452,10 +502,54 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chickenAlfredo</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"meat"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> 
+    <span class="s2">"prepTime"</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Chicken Alfredo"</span>
+<span class="p">}</span>
+
+<span class="n">cheeseQuesadilla</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"meat"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> 
+    <span class="s2">"prepTime"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Cheese Quesadilla"</span>
+
+<span class="p">}</span>
+
+<span class="n">beefWellington</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"meat"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">"prepTime"</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Beef Wellington"</span>
+
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">cookMeal</span><span class="p">(</span><span class="n">dish</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">dish</span><span class="p">[</span><span class="s2">"prepTime"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">30</span> <span class="ow">or</span> <span class="n">dish</span><span class="p">[</span><span class="s2">"meat"</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"You can't cook a "</span> <span class="o">+</span> <span class="n">dish</span><span class="p">[</span><span class="s2">"name"</span><span class="p">])</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"You can cook a "</span> <span class="o">+</span> <span class="n">dish</span><span class="p">[</span><span class="s2">"name"</span><span class="p">])</span>
+
+<span class="n">cookMeal</span><span class="p">(</span><span class="n">chickenAlfredo</span><span class="p">)</span>
+<span class="n">cookMeal</span><span class="p">(</span><span class="n">cheeseQuesadilla</span><span class="p">)</span>
+<span class="n">cookMeal</span><span class="p">(</span><span class="n">beefWellington</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You can't cook a Chicken Alfredo
+You can cook a Cheese Quesadilla
+You can't cook a Beef Wellington
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -476,33 +570,6 @@ window.onload = wrap_img;
 <li>If they have completed 5 scrumboard tasks, give the student a 2.7. If they have not completed 5 scrumboard tasks, give them a score of 2.5. If they have completed more than 5 tasks, give them a score of 3.0.</li>
 <li>How much would a student with 3 issues and 1 complete scrumboard task receive?</li>
 </ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.6">
-<a class="anchor" href="#3.6" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.6<a class="anchor-link" href="#3.6"> </a>
-</h2>
-<h3 id="Practice-Questions">
-<a class="anchor" href="#Practice-Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice Questions<a class="anchor-link" href="#Practice-Questions"> </a>
-</h3>
-<ol>
-<li>1; since rank is assigned "titan" the condition IF (rank = "titan") is met which would display "You like Clash of Clans a lot."</li>
-<li>2; since class is larger than cookies the else portation is ran</li>
-</ol>
-<h2 id="3.6">
-<a class="anchor" href="#3.6" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.6<a class="anchor-link" href="#3.6"> </a>
-</h2>
-<h3 id="Practice-Questions">
-<a class="anchor" href="#Practice-Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice Questions<a class="anchor-link" href="#Practice-Questions"> </a>
-</h3>
-<ol>
-<li>1; since there is more space than download the condition IF (space &gt; download) is met</li>
-<li>3; since the price is 200 and 200&gt;100 and the discount is 65&gt;50 it whould display "You can buy this item."</li>
-</ol>
 
 </div>
 </div>
