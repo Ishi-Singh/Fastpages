@@ -3,7 +3,7 @@ toc: true
 layout: post
 description:
 categories: [markdown]
-title: Comp Sci Tehcnical Business Panel
+title: Comp Sci Technical Business Panel
 ---
 
 ## About the Speakers
