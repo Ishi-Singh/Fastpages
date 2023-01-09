@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description:
+description: Scoring for Collegeboard Performance Tasks
 categories: [markdown]
 title: Performance Task Scoring
 ---
