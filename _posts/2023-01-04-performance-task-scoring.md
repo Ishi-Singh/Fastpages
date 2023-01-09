@@ -7,6 +7,7 @@ title: Performance Task Scoring
 ---
 
 ## Submission 1
+
 <table>
   <tr>
     <th>Reporting Category</th>
@@ -51,7 +52,8 @@ title: Performance Task Scoring
     <td>The person shows their code working as intended and there aren't any issues</td>
   </tr>
 
-  ## Submission 2
+## Submission 2
+
 <table>
   <tr>
     <th>Reporting Category</th>
