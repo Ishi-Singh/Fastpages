@@ -97,3 +97,4 @@ title: Performance Task Scoring
     <td>1</td>
     <td>The code is able to be ran and it works without error, it also mentions how inputs give different outputs, and they talk about how [arameters, procedures, and lists are being used</td>
   </tr>
+  
