@@ -7,7 +7,6 @@ title: Performance Task Scoring
 ---
 
 ## Submission 1
-
 <table>
   <tr>
     <th>Reporting Category</th>
@@ -53,7 +52,6 @@ title: Performance Task Scoring
   </tr>
 
   ## Submission 2
-
 <table>
   <tr>
     <th>Reporting Category</th>
@@ -65,35 +63,35 @@ title: Performance Task Scoring
     <td>Program Purpose and Function</td>
     <td>1</td>
     <td>1</td>
-    <td>The purpose is to entertain </td>
+    <td>The purpose is to entertain and the function is to change the status of the tiles</td>
   </tr>
   <tr>
     <td>Data Abstraction</td>
     <td>1</td>
     <td>1</td>
-    <td></td>
+    <td>startGrid, currentGrid, and nextGrid are the name of the lists and all of them store cell values on the screen </td>
   </tr>
   <tr>
     <td>Managing Complexity</td>
     <td>1</td>
     <td>1</td>
-    <td></td>
+    <td>The person basically says that the list keeps everything organized by keeping everything in the same place</td>
   </tr>
   <tr>
     <td>Procedural Abstraction</td>
     <td>1</td>
     <td>1</td>
-    <td></td>
+    <td>current and replacement are parameters which are used in the procecdure replaceList</td>
   </tr>
   <tr>
     <td>Algorithem Implementation</td>
     <td>1</td>
     <td>1</td>
-    <td></td>
+    <td>There is an if statement and also loops used in the code </td>
   </tr>
   <tr>
     <td>Testing</td>
     <td>1</td>
     <td>1</td>
-    <td></td>
+    <td>The code is able to be ran and it works without error, it also mentions how inputs give different outputs, and they talk about how [arameters, procedures, and lists are being used</td>
   </tr>
