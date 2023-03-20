@@ -124,9 +124,9 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Schema-of-Users-table-in-Sqlite.db">Schema of Users table in Sqlite.db </a></li>
 <li class="toc-entry toc-h1"><a href="#Database-Programming-is-Program-with-Data">Database Programming is Program with Data </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#Schema-of-Users-table-in-Sqlite.db">Schema of Users table in Sqlite.db </a></li>
 <li class="toc-entry toc-h2"><a href="#Reading-Users-table-in-Sqlite.db">Reading Users table in Sqlite.db </a></li>
 <li class="toc-entry toc-h2"><a href="#Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db </a></li>
 <li class="toc-entry toc-h2"><a href="#Updating-a-User-in-table-in-Sqlite.db">Updating a User in table in Sqlite.db </a></li>
@@ -147,23 +147,6 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Database-Programming-is-Program-with-Data">
-<a class="anchor" href="#Database-Programming-is-Program-with-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database Programming is Program with Data<a class="anchor-link" href="#Database-Programming-is-Program-with-Data"> </a>
-</h1>
-<blockquote>
-<p>The Tri 2 Final Project is an example of a Program with Data.</p>
-<p>Prepare to use SQLite in common Imperative Technique</p>
-<ul>
-<li>Explore <a href="https://www.tutorialspoint.com/python_data_access/python_sqlite_establishing_connection.htm">SQLite Connect object</a> to establish database connection- Explore <a href="https://www.tutorialspoint.com/python_data_access/python_sqlite_cursor_object.htm">SQLite Cursor Object</a> to fetch data from a table within a database</li>
-</ul>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Schema-of-Users-table-in-Sqlite.db">
 <a class="anchor" href="#Schema-of-Users-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Schema of Users table in Sqlite.db<a class="anchor-link" href="#Schema-of-Users-table-in-Sqlite.db"> </a>
 </h2>
@@ -180,6 +163,23 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Database-Programming-is-Program-with-Data">
+<a class="anchor" href="#Database-Programming-is-Program-with-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database Programming is Program with Data<a class="anchor-link" href="#Database-Programming-is-Program-with-Data"> </a>
+</h1>
+<blockquote>
+<p>The Tri 2 Final Project is an example of a Program with Data.</p>
+<p>Prepare to use SQLite in common Imperative Technique</p>
+<ul>
+<li>Explore <a href="https://www.tutorialspoint.com/python_data_access/python_sqlite_establishing_connection.htm">SQLite Connect object</a> to establish database connection- Explore <a href="https://www.tutorialspoint.com/python_data_access/python_sqlite_cursor_object.htm">SQLite Cursor Object</a> to fetch data from a table within a database</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -189,7 +189,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
-<span class="n">database</span> <span class="o">=</span> <span class="s1">'files/sqlite.db'</span> <span class="c1"># this is location of database</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'instance/sqlite.db'</span> <span class="c1"># this is location of database</span>
 
 <span class="k">def</span> <span class="nf">schema</span><span class="p">():</span>
     
@@ -213,6 +213,24 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(0, 'id', 'INTEGER', 1, None, 1)
+(1, '_name', 'VARCHAR(255)', 1, None, 0)
+(2, '_uid', 'VARCHAR(255)', 1, None, 0)
+(3, '_password', 'VARCHAR(255)', 1, None, 0)
+(4, '_dob', 'DATE', 0, None, 0)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -275,6 +293,28 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, 'Thomas Edison', 'toby', 'sha256$lwwd50sSzrKx9gjf$af5090b53c79c5e6932d21c7a335dc5cac028ccb890064a265577ed6c2958bd1', '1847-02-11')
+(2, 'Nikola Tesla', 'niko', 'sha256$QQxmqaRl2itWgXgZ$39c688aa8e693d863680b375ea26630d02413607c388c82d6761e0c2b7399197', '2023-03-15')
+(3, 'Alexander Graham Bell', 'lex', 'sha256$p6XRxKVlwXfZ8SR3$05c965f4c75d5e6aa1197d564614f1eda8d162cf52e5f3c8a756028632b16d83', '2023-03-15')
+(4, 'Eli Whitney', 'whit', 'sha256$PklD73XKVg0Veade$66c0da0d5b67586c09fdc35c638aef9d4a8a392d5f50c5c677ec265d09b5b495', '2023-03-15')
+(5, 'Indiana Jones', 'indi', 'sha256$nxiPTkfR9yzTsgr5$1ab00b8853103b9557e4fc802590deafd076be8587d44ecad1c88243cd2ca1ad', '1920-10-21')
+(6, 'Marion Ravenwood', 'raven', 'sha256$OAIQ2877WHWDAbZQ$2a048f7d7205965f2869c2af1f7aa3a733a04ec64418b3a83d77be7324fc32d7', '1921-10-21')
+(7, 'Thomas Edison', '', 'sha256$ARUnNf1sR4J6t55P$776ead6e32709ac10fbb6dc40d604388680f36b21ea516f9452bfe50f5ec606f', '1847-02-11')
+(8, 'Ishi Singh', 'ishi', 'sha256$Q3Jm2D66Ppo8obBw$14e20f6f5717f3f367a220fae40885f1f4387581f8050233ff8fd9a2cf30459e', '2006-04-27')
+(9, 'Jane Doe', 'jane', 'sha256$K0xksGk33HmIbbVN$6b337b8a04c862067980abcb8d98cdc68b1c9344c5a42368a9f6a106d42d318e', '2023-03-15')
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -332,10 +372,24 @@ window.onload = wrap_img;
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="c1">#create()</span>
+<span class="n">create</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Error while executing the INSERT: UNIQUE constraint failed: users._uid
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -521,6 +575,20 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The row with uid ishi was successfully deleted
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
