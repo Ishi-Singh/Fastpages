@@ -175,12 +175,12 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>What is 7 + 1 =
-8
-13
-3
-4
-You answered 8, that is CORRECT!
+<pre>What is 5 + 9 =
+10
+9
+18
+14
+WRONG. The answer is 14, you put 10
 </pre>
 </div>
 </div>
@@ -210,7 +210,7 @@ You answered 8, that is CORRECT!
 <span class="n">answer</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">player_answer</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"You answered </span><span class="si">{player_choice}</span><span class="s2">, that is CORRECT!"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"You answered </span><span class="si">{</span><span class="n">player_answer</span><span class="si">}</span><span class="s2">, that is CORRECT!"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"INCORRECT. The correct answer was </span><span class="si">{</span><span class="n">answer</span><span class="si">}</span><span class="s2">, you put </span><span class="si">{</span><span class="n">player_answer</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
 </pre></div>
@@ -225,8 +225,8 @@ You answered 8, that is CORRECT!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>What is 000011 + 001010 = 
-INCORRECT. The correct answer was 001101, you put 10110.
+<pre>What is 001110 + 000000 = 
+You answered 001110, that is CORRECT!
 </pre>
 </div>
 </div>
@@ -246,7 +246,7 @@ INCORRECT. The correct answer was 001101, you put 10110.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="k">def</span> <span class="nf">binary_game</span><span class="p">():</span> <span class="c1">## Changed to a class to make it easier to call</span>
+<span class="k">def</span> <span class="nf">binary_game</span><span class="p">():</span> <span class="c1">## Changed to a class to make it easier to call many times</span>
     <span class="n">num1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span> <span class="c1">## Generates a random number</span>
     <span class="n">num2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span> <span class="c1">## 16 is set as the max</span>
     <span class="c1">## The next part of the code allows the generated number to be changed into binary</span>
@@ -254,15 +254,14 @@ INCORRECT. The correct answer was 001101, you put 10110.
     <span class="n">binary1</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">num1</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1">## The string is sliced because the first two characters of the binary value were 0b</span>
     <span class="n">binary2</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">num2</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
     <span class="n">answer</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1">## Takes a sum</span>
-    <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="n">answer</span><span class="p">]</span>  <span class="c1"># initialize the list of answer options with the correct answer</span>
-    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="c1"># generate 3 other random answers</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="n">answer</span><span class="p">]</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span> <span class="c1">## Makes it so that only 4 choices are generated</span>
         <span class="n">random_answer</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">))[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">random_answer</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
             <span class="n">options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_answer</span><span class="p">)</span>
-    <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">binary1</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">binary2</span><span class="si">}</span><span class="s2"> = "</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">option</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">options</span><span class="p">):</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="c1">## Shuffles the answer choices</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">binary1</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">binary2</span><span class="si">}</span><span class="s2"> = "</span><span class="p">)</span> <span class="c1">## Asks the question</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">option</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">options</span><span class="p">):</span> <span class="c1">## Shows the list number</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">option</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="n">player_answer</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your answer choice: "</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">options</span><span class="p">[</span><span class="n">player_answer</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
@@ -283,12 +282,12 @@ INCORRECT. The correct answer was 001101, you put 10110.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>00000 + 00101 = 
-1. 01001
-2. 01011
-3. 00110
+<pre>01100 + 01010 = 
+1. 10110
+2. 01000
+3. 10000
 4. 00101
-You answered 4, that is CORRECT!
+You answered 1, that is CORRECT!
 </pre>
 </div>
 </div>
