@@ -1,0 +1,4529 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>P3-M 4/25 Simulations | Ishi Singh</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="P3-M 4/25 Simulations" />
+<meta name="author" content="Shruthi Malayath, Lina Awad, Lydia Cho, Sarah Liu, Jake Warren" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Creating simulations using pandas and python libraries" />
+<meta property="og:description" content="Creating simulations using pandas and python libraries" />
+<link rel="canonical" href="https://random-ign.github.io/Fastpages//Fastpages/student/2023/04/25/P3M-Simulations.html" />
+<meta property="og:url" content="https://random-ign.github.io/Fastpages//Fastpages/student/2023/04/25/P3M-Simulations.html" />
+<meta property="og:site_name" content="Ishi Singh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-25T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="P3-M 4/25 Simulations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shruthi Malayath, Lina Awad, Lydia Cho, Sarah Liu, Jake Warren"},"dateModified":"2023-04-25T00:00:00-05:00","datePublished":"2023-04-25T00:00:00-05:00","description":"Creating simulations using pandas and python libraries","headline":"P3-M 4/25 Simulations","mainEntityOfPage":{"@type":"WebPage","@id":"https://random-ign.github.io/Fastpages//Fastpages/student/2023/04/25/P3M-Simulations.html"},"url":"https://random-ign.github.io/Fastpages//Fastpages/student/2023/04/25/P3M-Simulations.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://random-ign.github.io/Fastpages//Fastpages/feed.xml" title="Ishi Singh" /><link rel="shortcut icon" type="image/x-icon" href="/Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /><script src="https://hypothes.is/embed.js" async></script>
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Fastpages/">Ishi Singh</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Fastpages/_pages/JavaScript.html">JavaScript</a><a class="page-link" href="/Fastpages/about/">About Me</a><a class="page-link" href="/Fastpages/search/">Search</a><a class="page-link" href="/Fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">P3-M 4/25 Simulations</h1><p class="page-description">Creating simulations using pandas and python libraries</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-25T00:00:00-05:00" itemprop="datePublished">
+        Apr 25, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Shruthi Malayath, Lina Awad, Lydia Cho, Sarah Liu, Jake Warren</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      26 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Fastpages/categories/#student">student</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Objectives">Objectives </a></li>
+<li class="toc-entry toc-h2"><a href="#What-are-simulations-by-College-Board-definition?">What are simulations by College Board definition? </a></li>
+<li class="toc-entry toc-h2"><a href="#Analyzing-an-Example:-Air-Traffic-Simulator">Analyzing an Example: Air-Traffic Simulator </a></li>
+<li class="toc-entry toc-h2"><a href="#Functions-we-often-need-(python)">Functions we often need (python) </a></li>
+<li class="toc-entry toc-h2"><a href="#Functions-we-often-need-(js)">Functions we often need (js) </a></li>
+<li class="toc-entry toc-h2"><a href="#College-Board-Question-1">College Board Question 1 </a></li>
+<li class="toc-entry toc-h2"><a href="#Examples">Examples </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Card-Flip">Card Flip </a></li>
+<li class="toc-entry toc-h3"><a href="#Coin-Flip">Coin Flip </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Adding-images-(in-Python)">Adding images (in Python) </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Spin-the-Wheel">Spin the Wheel </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Population-Growth-and-Plots">Population Growth and Plots </a></li>
+<li class="toc-entry toc-h2"><a href="#Example-on-how-simplification-can-cause-bias">Example on how simplification can cause bias </a></li>
+<li class="toc-entry toc-h1"><a href="#JS-examples">JS examples </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
+<li class="toc-entry toc-h2"><a href="#Simulation-Questions">Simulation Questions </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-25-P3M-Simulations.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Objectives">
+<a class="anchor" href="#Objectives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Objectives<a class="anchor-link" href="#Objectives"> </a>
+</h2>
+<ol>
+<li>Understand how computers can be used to represent real-world phenomena or outcomes</li>
+<li>Compare simulations with real-world contexts.</li>
+<li>Implement code to mimic real world situations, problems, or phenomena.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-are-simulations-by-College-Board-definition?">
+<a class="anchor" href="#What-are-simulations-by-College-Board-definition?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are simulations by College Board definition?<a class="anchor-link" href="#What-are-simulations-by-College-Board-definition?"> </a>
+</h2>
+<ul>
+<li>Simulations are <code>abstractions</code> that mimic more complex objects or phenomena from the real world<ul>
+<li>Purposes include drawing inferences without the <code>constraints</code> of the real world</li>
+</ul>
+</li>
+<li>Simulations use varying sets of values to reflect the <code>changing</code> state of a real phenomenon</li>
+<li>Often, when developing a simulation, it is necessary to remove specific <code>details</code> or simplify aspects<ul>
+<li>Simulations can often contain <code>bias</code> based on which details or real-world elements were included/excluded</li>
+</ul>
+</li>
+<li>Simulations allow the formulation of <code>hypothesis</code> under consideration</li>
+<li>Variability and <code>randomness</code> of the world is considered using random number generators</li>
+<li>Examples: rolling dice, spinners, molecular models, analyze chemicals/reactions...</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://www.itgsnews.com/wp-content/uploads/2017/05/ecosystem-model-678x381.webp" alt="">
+<img src="https://images.computerhistory.org/makesoftware/mscw.car-crash-simulation.real-and-simulated-crash-test.simulation-on-cray-supercomputer.jpg" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Analyzing-an-Example:-Air-Traffic-Simulator">
+<a class="anchor" href="#Analyzing-an-Example:-Air-Traffic-Simulator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analyzing an Example: Air-Traffic Simulator<a class="anchor-link" href="#Analyzing-an-Example:-Air-Traffic-Simulator"> </a>
+</h2>
+<ul>
+<li>Say we want to find out what the optimal number of aircrafts that can be in the air in one area is.</li>
+<li>A simulation allows us to explore this question without real world contraints of money, time, safety<ul>
+<li>Unfortunately we can't just fly 67 planes all at once and see what happens</li>
+</ul>
+</li>
+<li>Since the simulation won't be able to take all variables into control, it may have a bias towards one answer</li>
+<li>Will not always have the same result</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Functions-we-often-need-(python)">
+<a class="anchor" href="#Functions-we-often-need-(python)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions we often need (python)<a class="anchor-link" href="#Functions-we-often-need-(python)"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="c1"># a module that defines a series of functions for generating or manipulating random integers</span>
+<span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">()</span> <span class="c1">#returns a randomly selected element from the specified sequence</span>
+<span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span> <span class="c1"># returns random value from list</span>
+<span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#randomly selects an integer from given range; range in this case is from 0 to 10</span>
+<span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="c1">#will generate a random float between 0.0 to 1.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Functions-we-often-need-(js)">
+<a class="anchor" href="#Functions-we-often-need-(js)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions we often need (js)<a class="anchor-link" href="#Functions-we-often-need-(js)"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">();</span> <span class="o">//</span><span class="n">returns</span> <span class="n">a</span> <span class="n">random</span> <span class="n">number</span>
+<span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span> <span class="o">//</span> <span class="n">Returns</span> <span class="n">a</span> <span class="n">random</span> <span class="n">integer</span> <span class="kn">from</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">9</span><span class="p">:</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="College-Board-Question-1">
+<a class="anchor" href="#College-Board-Question-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board Question 1<a class="anchor-link" href="#College-Board-Question-1"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Question: The following code simulates the feeding of 4 fish in an aquarium while the owner is on a 5-day trip:</p>
+
+<pre><code>numFish ← 4
+
+foodPerDay ← 20
+
+foodLeft ← 160
+
+daysStarving ← 0
+
+    REPEAT 5 TIMES {
+
+    foodConsumed ← numFish * foodPerDay
+
+    foodLeft ← foodLeft - foodConsumed
+
+    IF (foodLeft &lt; 0) {
+
+    daysStarving ← daysStarving + 1
+
+    }
+</code></pre>
+<p>}</p>
+<ul>
+<li>This simulation simplifies a real-world scenario into something that can be modeled in code and executed on a computer.</li>
+<li>Summarize how the code works:</li>
+</ul>
+<p>The constants tells us that there are 4 fish which eat 20 pieces of food a day and that there are 160 pieces of food left. And the rest of the code iterates the sequence 5 times and if the food ever becomes less than 0 it shows the number of days the fish starves.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Examples">
+<a class="anchor" href="#Examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples<a class="anchor-link" href="#Examples"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Card-Flip">
+<a class="anchor" href="#Card-Flip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Card Flip<a class="anchor-link" href="#Card-Flip"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">cards</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Ace"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">,</span> <span class="s2">"3"</span><span class="p">,</span> <span class="s2">"4"</span><span class="p">,</span> <span class="s2">"5"</span><span class="p">,</span> <span class="s2">"6"</span><span class="p">,</span> <span class="s2">"7"</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">,</span> <span class="s2">"9"</span><span class="p">,</span> <span class="s2">"10"</span><span class="p">,</span> <span class="s2">"Jack"</span><span class="p">,</span> <span class="s2">"Queen"</span><span class="p">,</span> <span class="s2">"King"</span><span class="p">]</span> 
+<span class="n">suits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Diamonds"</span><span class="p">,</span> <span class="s2">"Hearts"</span><span class="p">,</span> <span class="s2">"Spades"</span><span class="p">,</span> <span class="s2">"Clubs"</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">cards</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" of "</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">suits</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>4 of Diamonds
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Coin-Flip">
+<a class="anchor" href="#Coin-Flip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coin Flip<a class="anchor-link" href="#Coin-Flip"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">coinflip</span><span class="p">():</span>         <span class="c1">#def function </span>
+    <span class="n">randomflip</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">#picks either 0 or 1 randomly </span>
+    <span class="k">if</span> <span class="n">randomflip</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">#assigning 0 to be heads--&gt; if 0 is chosen then it will print, "Heads"</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Heads"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">randomflip</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">## When I was using if randomflip == 0 or 1 the result was heads all the time so I changed it to this</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Heads"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">randomflip</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="c1">#assigning 1 to be tails--&gt; if 1 is chosen then it will print, "Tails"</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Tails"</span><span class="p">)</span>
+
+<span class="c1">#Tossing the coin 5 times:</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="n">coinflip</span><span class="p">()</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">coinflip</span><span class="p">()</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="n">coinflip</span><span class="p">()</span>
+<span class="n">t4</span> <span class="o">=</span> <span class="n">coinflip</span><span class="p">()</span>
+<span class="n">t5</span> <span class="o">=</span> <span class="n">coinflip</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Heads
+Tails
+Heads
+Heads
+Tails
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Your turn: Change the code to make it simulate the flipping of a weighted coin.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adding-images-(in-Python)">
+<a class="anchor" href="#Adding-images-(in-Python)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding images (in Python)<a class="anchor-link" href="#Adding-images-(in-Python)"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Add a heads and tails images into your images directory with the correct names and run the code below</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># importing Image class from PIL package</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+ 
+<span class="c1"># creating a object</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">"images/heads.png"</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">"images/tails.png"</span><span class="p">)</span>
+
+<span class="n">i</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"heads"</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"tails"</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>tails
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In order to display an image in python, we can use the PIL package we previously learned about.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Spin-the-Wheel">
+<a class="anchor" href="#Spin-the-Wheel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spin the Wheel<a class="anchor-link" href="#Spin-the-Wheel"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Spin the wheel!"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"----------------------------------"</span><span class="p">)</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">blue</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">red</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">RedImg</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">"images/red.png"</span><span class="p">)</span>
+<span class="n">BlueImg</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">"images/blue.png"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">spin</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">spin</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># head</span>
+        <span class="n">blue</span> <span class="o">=</span> <span class="n">blue</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">BlueImg</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>         <span class="c1"># tail</span>
+        <span class="n">red</span> <span class="o">=</span> <span class="n">red</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">RedImg</span><span class="p">)</span>
+ 
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Number of blue:'</span><span class="p">,</span> <span class="n">blue</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Number of red:'</span><span class="p">,</span> <span class="n">red</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Spin the wheel!
+----------------------------------
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABWCAYAAABLn1FEAAAA10lEQVR4nO3QwQkAIRDAwNX++73nWcUgSKaCkPXN/BNm3w54XYOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGow1GGsw1mCswViDsQZjDcYajDUYazDWYKzBWIOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGow1GGsw1mCswViDsQZjDcYajDUYazDWYKzBWIOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGow1GGsw1mCswViDsQZjDcYajDUYazDWYKzBWIOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGowd4hsCohixgVsAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABJCAYAAABB/xr9AAAAv0lEQVR4nO3QAQnAIAAAQRXWwv4FDbCVeBDGXYLn537OO0is2wF/YmbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGfoAbyYCpRzgbwYAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABWCAYAAABLn1FEAAAA10lEQVR4nO3QwQkAIRDAwNX++73nWcUgSKaCkPXN/BNm3w54XYOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGow1GGsw1mCswViDsQZjDcYajDUYazDWYKzBWIOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGow1GGsw1mCswViDsQZjDcYajDUYazDWYKzBWIOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGow1GGsw1mCswViDsQZjDcYajDUYazDWYKzBWIOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGowd4hsCohixgVsAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABWCAYAAABLn1FEAAAA10lEQVR4nO3QwQkAIRDAwNX++73nWcUgSKaCkPXN/BNm3w54XYOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGow1GGsw1mCswViDsQZjDcYajDUYazDWYKzBWIOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGow1GGsw1mCswViDsQZjDcYajDUYazDWYKzBWIOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGow1GGsw1mCswViDsQZjDcYajDUYazDWYKzBWIOxBmMNxhqMNRhrMNZgrMFYg7EGYw3GGowd4hsCohixgVsAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABJCAYAAABB/xr9AAAAv0lEQVR4nO3QAQnAIAAAQRXWwv4FDbCVeBDGXYLn537OO0is2wF/YmbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGfoAbyYCpRzgbwYAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABJCAYAAABB/xr9AAAAv0lEQVR4nO3QAQnAIAAAQRXWwv4FDbCVeBDGXYLn537OO0is2wF/YmbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGfoAbyYCpRzgbwYAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABJCAYAAABB/xr9AAAAv0lEQVR4nO3QAQnAIAAAQRXWwv4FDbCVeBDGXYLn537OO0is2wF/YmbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGfoAbyYCpRzgbwYAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABJCAYAAABB/xr9AAAAv0lEQVR4nO3QAQnAIAAAQRXWwv4FDbCVeBDGXYLn537OO0is2wF/YmbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGfoAbyYCpRzgbwYAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABJCAYAAABB/xr9AAAAv0lEQVR4nO3QAQnAIAAAQRXWwv4FDbCVeBDGXYLn537OO0is2wF/YmbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGfoAbyYCpRzgbwYAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABJCAYAAABB/xr9AAAAv0lEQVR4nO3QAQnAIAAAQRXWwv4FDbCVeBDGXYLn537OO0is2wF/YmbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGTIzZGbIzJCZITNDZobMDJkZMjNkZsjMkJkhM0NmhswMmRkyM2RmyMyQmSEzQ2aGzAyZGfoAbyYCpRzgbwYAAAAASUVORK5CYII=">
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number of blue: 7
+Number of red: 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Your turn: Add a visual to the simulation!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Population-Growth-and-Plots">
+<a class="anchor" href="#Population-Growth-and-Plots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Population Growth and Plots<a class="anchor-link" href="#Population-Growth-and-Plots"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">totalPopulation</span> <span class="o">=</span> <span class="mi">50</span> 
+<span class="n">growthFactor</span> <span class="o">=</span> <span class="mf">1.00005</span>
+<span class="n">dayCount</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#Every 2 months the population is reported</span>
+
+<span class="k">while</span> <span class="n">totalPopulation</span> <span class="o">&lt;</span> <span class="mi">1000000</span><span class="p">:</span>
+    <span class="n">totalPopulation</span> <span class="o">*=</span> <span class="n">growthFactor</span>
+    <span class="c1">#Every 56th day, population is reported</span>
+    <span class="n">dayCount</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">dayCount</span> <span class="o">==</span> <span class="mi">56</span><span class="p">:</span> 
+        <span class="n">dayCount</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">totalPopulation</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>50.14019267336515
+50.28077842644361
+50.421758361373264
+50.5631335833823
+50.704905200797775
+50.847074325054315
+50.98964207070282
+51.13260955541927
+51.27597790001347
+51.41974822843774
+51.563921667795874
+51.70849934835185
+51.85348240353876
+51.99887196996765
+52.14466918743647
+52.290875198939005
+52.43749115067384
+52.5845181920533
+52.731957475712534
+52.87981015751845
+53.028077396578915
+53.17676035525173
+53.325860199153716
+53.47537809717
+53.62531522146305
+53.775672747481956
+53.92645185397153
+54.0776537229816
+54.22927953987637
+54.38133049334356
+54.533807775403844
+54.68671258142016
+54.840046110106975
+54.993809563539834
+55.14800414716474
+55.302631069807575
+55.45769154368362
+55.613186784406984
+55.769118011000224
+55.92548644590379
+56.082293314985726
+56.239539847551235
+56.39722727635229
+56.55535683759732
+56.71392977096098
+56.87294731959368
+57.032410730131446
+57.19232125270578
+57.35268014095325
+57.51348865202554
+57.67474804659919
+57.83645958888546
+57.998624546640265
+58.161244191174156
+58.324319797362236
+58.48785264365415
+58.651844012084126
+58.81629518828111
+58.98120746147867
+59.14658212452524
+59.312420473894186
+59.47872380969402
+59.645493435678574
+59.81273065925718
+59.98043679150499
+60.14861314717315
+60.31726104469929
+60.486381806217665
+60.65597675756963
+60.82604722831395
+60.99659455173736
+61.16762006486491
+61.33912510847044
+61.51111102708713
+61.68357916901805
+61.85653088634677
+62.029967534947765
+62.2038904744973
+62.3783010684839
+62.5532006842192
+62.72859069284855
+62.9044724693617
+63.08084739260377
+63.25771684528589
+63.43508221399618
+63.61294488921051
+63.791306265303454
+63.9701677405592
+64.14953071718247
+64.32939660130967
+64.50976680301973
+64.69064273634523
+64.87202581928359
+65.05391747380793
+65.23631912587847
+65.41923220545367
+65.6026581465012
+65.78659838700955
+65.97105436899903
+66.1560275385331
+66.34151934572994
+66.52753124477363
+66.71406469392542
+66.90112115553534
+67.08870209605372
+67.27680898604255
+67.46544330018713
+67.65460651730747
+67.84430012037001
+68.0345255964992
+68.22528443698917
+68.41657813731555
+68.60840819714687
+68.80077612035657
+68.99368341503474
+69.1871315935
+69.38112217231115
+69.57565667227935
+69.77073661847982
+69.96636354026379
+70.16253897127073
+70.35926444944013
+70.55654151702359
+70.75437172059699
+70.95275661107263
+71.15169774371125
+71.35119667813444
+71.55125497833659
+71.75187421269743
+71.95305595399414
+72.15480177941373
+72.35711327056549
+72.55999201349321
+72.76343959868774
+72.96745762109934
+73.17204768015053
+73.37721137974819
+73.58295032829629
+73.7892661387086
+73.99616042842136
+74.20363481940569
+74.41169093818056
+74.62033041582539
+74.82955488799308
+75.03936599492248
+75.24976538145154
+75.46075469703
+75.67233559573249
+75.88450973627147
+76.0972787820101
+76.31064440097533
+76.52460826587115
+76.73917205409133
+76.95433744773317
+77.17010613360995
+77.3864798032648
+77.60346015298347
+77.82104888380806
+78.03924770155005
+78.25805831680371
+78.47748244495963
+78.69752180621806
+78.91817812560257
+79.13945313297332
+79.36134856304064
+79.58386615537891
+79.80700765444
+80.0307748095669
+80.2551693750076
+80.4801931099287
+80.70584777842916
+80.93213514955427
+81.15905699730956
+81.38661510067445
+81.6148112436165
+81.84364721510522
+82.07312480912596
+82.30324582469439
+82.53401206587023
+82.76542534177153
+82.99748746658884
+83.23020025959946
+83.46356554518161
+83.69758515282888
+83.93226091716447
+84.16759467795565
+84.40358828012793
+84.64024357377998
+84.87756241419767
+85.11554666186892
+85.35419818249822
+85.59351884702103
+85.83351053161893
+86.07417511773376
+86.31551449208287
+86.55753054667352
+86.80022517881795
+87.0436002911482
+87.28765779163105
+87.53239959358282
+87.77782761568463
+88.02394378199715
+88.27075002197599
+88.51824827048654
+88.7664404678193
+89.01532855970511
+89.26491449733037
+89.51520023735218
+89.76618774191397
+90.01787897866066
+90.27027592075423
+90.523380546889
+90.77719484130736
+91.0317207938151
+91.28696039979738
+91.54291566023389
+91.79958858171481
+92.05698117645656
+92.31509546231764
+92.57393346281405
+92.83349720713561
+93.0937887301617
+93.3548100724771
+93.61656328038823
+93.8790504059389
+94.1422735069267
+94.40623464691882
+94.67093589526853
+94.93637932713133
+95.20256702348084
+95.46950107112576
+95.73718356272572
+96.00561659680784
+96.2748022777833
+96.54474271596374
+96.81544002757771
+97.08689633478744
+97.35911376570533
+97.63209445441078
+97.90584054096682
+98.18035417143682
+98.45563749790136
+98.73169267847535
+99.00852187732455
+99.28612726468283
+99.56451101686899
+99.84367531630399
+100.12362235152784
+100.4043543172171
+100.6858734142017
+100.9681818494825
+101.25128183624842
+101.53517559389384
+101.81986534803593
+102.1053533305323
+102.39164177949827
+102.6787329393245
+102.96662906069467
+103.2553324006029
+103.54484522237183
+103.83516979566991
+104.12630839652952
+104.41826330736457
+104.7110368169886
+105.00463122063279
+105.29904881996362
+105.59429192310112
+105.89036284463707
+106.18726390565291
+106.48499743373814
+106.78356576300845
+107.082971234124
+107.38321619430786
+107.68430299736441
+107.9862340036976
+108.28901158032987
+108.59263810092013
+108.89711594578293
+109.20244750190679
+109.50863516297301
+109.81568132937433
+110.12358840823391
+110.43235881342416
+110.74199496558553
+111.05249929214574
+111.36387422733867
+111.67612221222326
+111.98924569470296
+112.30324712954469
+112.61812897839816
+112.93389370981537
+113.25054379926964
+113.56808172917515
+113.8865099889064
+114.20583107481775
+114.52604749026302
+114.84716174561511
+115.16917635828544
+115.49209385274403
+115.81591676053907
+116.14064762031693
+116.46628897784198
+116.79284338601637
+117.12031340490034
+117.4487016017323
+117.77801055094855
+118.1082428342038
+118.43940104039156
+118.77148776566392
+119.10450561345237
+119.43845719448807
+119.77334512682211
+120.10917203584634
+120.44594055431388
+120.78365332235961
+121.12231298752103
+121.46192220475878
+121.80248363647786
+122.14399995254809
+122.48647383032527
+122.82990795467218
+123.17430501797935
+123.51966772018655
+123.86599876880385
+124.2133008789327
+124.56157677328723
+124.9108291822157
+125.26106084372192
+125.61227450348659
+125.96447291488887
+126.31765883902827
+126.67183504474562
+127.02700430864537
+127.38316941511724
+127.74033315635786
+128.09849833239275
+128.45766775109823
+128.81784422822375
+129.17903058741356
+129.54122966022885
+129.9044442861703
+130.26867731270008
+130.63393159526427
+131.00020999731495
+131.36751539033335
+131.73585065385146
+132.1052186754753
+132.4756223509073
+132.84706458396897
+133.21954828662376
+133.5930763789997
+133.9676517894126
+134.3432774543887
+134.71995631868808
+135.0976913353271
+135.47648546560228
+135.85634167911294
+136.2372629537851
+136.61925227589387
+137.0023126400879
+137.38644704941228
+137.77165851533223
+138.1579500577565
+138.5453247050614
+138.93378549411435
+139.32333547029742
+139.71397768753192
+140.10571520830172
+140.49855110367753
+140.89248845334066
+141.2875303456074
+141.68367987745353
+142.08094015453818
+142.47931429122812
+142.87880541062242
+143.27941664457708
+143.6811511337291
+144.08401202752148
+144.4880024842277
+144.89312567097676
+145.29938476377774
+145.7067829475447
+146.11532341612175
+146.52500937230818
+146.93584402788318
+147.34783060363168
+147.76097232936925
+148.17527244396697
+148.59073419537748
+149.00736084066034
+149.425155646007
+149.84412188676714
+150.26426284747424
+150.6855818218708
+151.10808211293462
+151.53176703290453
+151.9566399033063
+152.3827040549788
+152.80996282810023
+153.23841957221413
+153.66807764625565
+154.0989404185779
+154.5310112669781
+154.96429357872486
+155.39879075058366
+155.83450618884436
+156.27144330934723
+156.70960553751047
+157.14899630835643
+157.58961906653877
+158.0314772663694
+158.47457437184565
+158.9189138566775
+159.3644992043146
+159.81133390797362
+160.2594214706658
+160.70876540522437
+161.1593692343318
+161.61123649054784
+162.06437071633695
+162.51877546409628
+162.974454296183
+163.43141078494295
+163.8896485127385
+164.34917107197592
+164.8099820651345
+165.27208510479406
+165.7354838136635
+166.20018182460961
+166.66618278068484
+167.13349033515655
+167.60210815153516
+168.07203990360307
+168.54328927544339
+169.01585996146883
+169.48975566645098
+169.96498010554862
+170.44153700433756
+170.91943009883965
+171.39866313555166
+171.87923987147536
+172.36116407414633
+172.84443952166393
+173.3290700027207
+173.81505931663224
+174.30241127336657
+174.7911296935745
+175.2812184086196
+175.77268126060764
+176.26552210241738
+176.75974479773012
+177.2553532210609
+177.75235125778775
+178.25074280418306
+178.75053176744373
+179.2517220657221
+179.75431762815606
+180.25832239490038
+180.7637403171574
+181.2705753572083
+181.7788314884435
+182.2885126953946
+182.79962297376505
+183.31216633046162
+183.8261467836261
+184.34156836266627
+184.85843510828798
+185.3767510725265
+185.89652031877856
+186.41774692183384
+186.94043496790735
+187.4645885546712
+187.99021179128667
+188.51730879843657
+189.04588370835765
+189.57594066487266
+190.107483823423
+190.64051735110152
+191.1750454266848
+191.7110722406662
+192.24860199528842
+192.78763890457714
+193.32818719437287
+193.87025110236505
+194.41383487812527
+194.95894278313986
+195.50557909084395
+196.05374808665488
+196.60345406800522
+197.15470134437754
+197.707494237337
+198.26183708056612
+198.8177342198983
+199.37519001335195
+199.93420883116485
+200.49479505582852
+201.05695308212188
+201.62068731714655
+202.18600218036067
+202.75290210361413
+203.32139153118305
+203.8914749198046
+204.463156738712
+205.03644146966957
+205.6113336070078
+206.1878376576584
+206.76595814119057
+207.34569958984486
+207.92706654857014
+208.51006357505847
+209.0946952397809
+209.68096612602358
+210.26888082992338
+210.85844396050425
+211.44966013971296
+212.0425340024556
+212.63707019663403
+213.233273383182
+213.83114823610165
+214.43069944250087
+215.03193170262884
+215.63484972991407
+216.23945825100063
+216.84576200578545
+217.45376574745524
+218.0634742425242
+218.6748922708712
+219.28802462577698
+219.90287611396192
+220.5194515556238
+221.1377557844757
+221.75779364778353
+222.37957000640415
+223.0030897348239
+223.62835772119607
+224.25537886737985
+224.88415808897844
+225.5147003153777
+226.14701048978466
+226.78109356926657
+227.41695452478945
+228.0545983412572
+228.69403001755072
+229.33525456656687
+229.97827701525802
+230.62310240467164
+231.26973578998908
+231.91818224056598
+232.56844683997173
+233.22053468602925
+233.87445089085486
+234.53020058089874
+235.18778889698473
+235.84722099435083
+236.5085020426895
+237.1716372261884
+237.83663174357085
+238.50349080813663
+239.17221964780276
+239.84282350514476
+240.51530763743727
+241.18967731669585
+241.8659378297178
+242.54409447812415
+243.2241525784004
+243.90611746193915
+244.58999447508114
+245.27578897915754
+245.96350635053204
+246.65315198064286
+247.34473127604497
+248.0382496584523
+248.73371256478077
+249.4311254471907
+250.13049377312905
+250.831823025373
+251.53511870207248
+252.2403863167937
+252.94763139856178
+253.6568594919047
+254.36807615689625
+255.0812869691998
+255.79649752011247
+256.51371341660814
+257.2329402813819
+257.95418375289455
+258.6774494854154
+259.4027431490684
+260.1300704298747
+260.8594370297992
+261.59084866679365
+262.32431107484285
+263.05983000400795
+263.79741122047267
+264.53706050658855
+265.27878366091994
+266.02258649828946
+266.76847484982346
+267.51645456299826
+268.2665315016851
+269.01871154619727
+269.7730005933353
+270.5294045564336
+271.2879293654064
+272.048580966795
+272.81136532381356
+273.5762884163963
+274.34335624124435
+275.112574811873
+275.8839501586579
+276.65748832888363
+277.43319538679
+278.2110774136202
+278.9911405076685
+279.77339078432755
+280.55783437613707
+281.34447743283164
+282.1333261213881
+282.92438662607515
+283.7176651485011
+284.5131679076628
+285.310901139994
+286.11087109941457
+286.91308405737965
+287.71754630292827
+288.52426414273344
+289.3332439011511
+290.1444919202694
+290.9580145599587
+291.7738181979222
+292.59190922974483
+293.4122940689435
+294.234979147018
+295.0599709135012
+295.8872758360093
+296.7169004002931
+297.5488511102877
+298.3831344881652
+299.2197570743844
+300.05872542774284
+300.9000461254279
+301.7437257630681
+302.589770954786
+303.43818833324764
+304.2889845497177
+305.14216627410957
+305.9977401950374
+306.85571301987005
+307.71609147478233
+308.57888230480876
+309.44409227389536
+310.3117281649539
+311.1817967799137
+312.0543049397762
+312.9292594846684
+313.8066672738949
+314.68653518599365
+315.5688701187883
+316.4536789894435
+317.3409687345188
+318.23074631002237
+319.12301869146626
+320.0177928739205
+320.9150758720686
+321.81487472026214
+322.7171964725761
+323.62204820286394
+324.52943700481296
+325.4393699920007
+326.3518542979497
+327.26689707618374
+328.1845055002843
+329.1046867639462
+330.02744808103495
+330.95279668564194
+331.88073983214247
+332.81128479525165
+333.74443887008215
+334.6802093722009
+335.6186036376864
+336.55962902318737
+337.5032929059783
+338.4496026840188
+339.39856577601165
+340.3501896214602
+341.3044816807274
+342.261449435094
+343.22110038681643
+344.18344205918754
+345.1484819965934
+346.11622776457364
+347.08668694988114
+348.05986716054014
+349.035776025907
+350.01442119673004
+350.99581034520844
+351.97995116505376
+352.9668513715488
+353.95651870160964
+354.9489609138453
+355.94418578861934
+356.9422011281091
+357.9430147563688
+358.94663451939033
+359.9530682851643
+360.96232394374175
+361.97440940729695
+362.9893326101884
+364.0071015090213
+365.0277240827101
+366.0512083325411
+367.07756228223457
+368.1067939780088
+369.13891148864167
+370.1739229055354
+371.21183634277907
+372.2526599372127
+373.29640184849023
+374.34307025914455
+375.39267337465117
+376.4452194234927
+377.50071665722265
+378.55917335053124
+379.6205978013096
+380.6849983307144
+381.75238328323405
+382.82276102675394
+383.8961399526212
+384.97252847571133
+386.0519350344942
+387.1343680910996
+388.21983613138366
+389.30834766499646
+390.39991122544694
+391.494535370171
+392.59222868059885
+393.69299976222095
+394.796857244657
+395.9038097817225
+397.01386605149725
+398.1270347563929
+399.2433246232216
+400.36274440326383
+401.4853028723379
+402.6110088308677
+403.7398711039524
+404.87189854143577
+406.0071000179748
+407.1454844331095
+408.287060711334
+409.43183780216435
+410.5798246802101
+411.73103034524416
+412.88546382227366
+414.0431341616106
+415.2040504389423
+416.3682217554037
+417.5356572376472
+418.7063660379155
+419.8803573341126
+421.0576403298762
+422.23822425464937
+423.4221183637535
+424.60933193846023
+425.799874286065
+426.9937547399591
+428.1909826597033
+429.39156743110146
+430.5955184662737
+431.80284520373044
+433.01355710844604
+434.22766367193367
+435.4451744123189
+436.6660988744152
+437.89044662979774
+439.11822727687934
+440.34945044098566
+441.5841257744296
+442.8222629565879
+444.0638716939778
+445.308961720331
+446.5575427966714
+447.8096247113921
+449.06521728033084
+450.3243303468473
+451.58697378190135
+452.8531574841283
+454.1228913799193
+455.3961854234965
+456.6730495969924
+457.95349391052855
+459.2375284022931
+460.5251631386193
+461.8164082140656
+463.11127375149374
+464.40976990214904
+465.7119068457384
+467.01769479051194
+468.3271439733419
+469.64026465980334
+470.95706714425455
+472.2775617499174
+473.60175882895885
+474.92966876257213
+476.26130196105726
+477.5966688639028
+478.93577993986906
+480.2786456870687
+481.62527663304957
+482.9756833348777
+484.329876379219
+485.6878663824232
+487.0496639906063
+488.41527987973484
+489.78472475570936
+491.1580093544477
+492.5351444419697
+493.9161408144817
+495.30100929846105
+496.689760750741
+498.0824060585959
+499.47895613982575
+500.8794219428431
+502.28381444675813
+503.69214466146485
+505.1044236277269
+506.52066241726544
+507.9408721328446
+509.36506390835916
+510.7932489089215
+512.2254383309495
+513.6616434022543
+515.1018753821286
+516.5461455614329
+517.9944652626872
+519.4468458401576
+520.9032986799461
+522.363835200079
+523.8284668505978
+525.2972051136486
+526.770061503571
+528.2470475669891
+529.7281748829021
+531.2134550627753
+532.7028997506313
+534.1965206231389
+535.6943293897091
+537.1963377925831
+538.7025576069253
+540.2130006409161
+541.7276787358455
+543.2466037662027
+544.7697876397733
+546.2972422977293
+547.828979714724
+549.3650118989859
+550.9053508924134
+552.4500087706683
+553.9989976432714
+555.5523296536958
+557.1100169794631
+558.67207183224
+560.2385064579324
+561.8093331367805
+563.3845641834594
+564.9642119471699
+566.54828881174
+568.1368071957193
+569.7297795524775
+571.3272183703012
+572.929136172493
+574.5355455174692
+576.1464589988572
+577.7618892455956
+579.3818489220322
+581.0063507280242
+582.6354073990381
+584.2690317062466
+585.9072364566338
+587.5500344930905
+589.1974386945177
+590.8494619759274
+592.5061172885423
+594.1674176199
+595.8333759939517
+597.5040054711668
+599.1793191486345
+600.8593301601647
+602.5440516763953
+604.2334969048909
+605.927679090248
+607.6266115142
+609.3303074957197
+611.0387803911243
+612.7520435941806
+614.4701105362091
+616.1929946861893
+617.9207095508675
+619.6532686748599
+621.3906856407593
+623.132974069243
+624.8801476191777
+626.6322199877284
+628.3892049104649
+630.1511161614686
+631.9179675534425
+633.6897729378182
+635.4665462048637
+637.248301283795
+639.035052142882
+640.8268127895609
+642.6235972705416
+644.425419671919
+646.2322941192846
+648.0442347778338
+649.8612558524812
+651.683371587969
+653.510596268979
+655.3429442202466
+657.1804298066711
+659.0230674334283
+660.8708715460835
+662.7238566307075
+664.5820372139859
+666.4454278633357
+668.3140431870181
+670.1878978342551
+672.067006495342
+673.9513839017637
+675.8410448263103
+677.7360040831921
+679.6362765281566
+681.5418770586045
+683.4528206137071
+685.3691221745227
+687.2907967641139
+689.2178594476659
+691.150325332605
+693.0882095687164
+695.0315273482627
+696.9802939061026
+698.9345245198126
+700.8942345098052
+702.8594392394482
+704.8301541151864
+706.8063945866619
+708.7881761468354
+710.7755143321076
+712.7684247224413
+714.7669229414836
+716.7710246566857
+718.7807455794315
+720.7961014651545
+722.8171081134661
+724.843781368276
+726.8761371179183
+728.9141912952758
+730.9579598779051
+733.0074588881613
+735.0627043933235
+737.1237125057212
+739.1904993828613
+741.2630812275531
+743.3414742880366
+745.4256948581091
+747.5157592772539
+749.6116839307671
+751.7134852498872
+753.8211797119232
+755.9347838403846
+758.0543142051102
+760.1797874223978
+762.3112201551356
+764.4486291129311
+766.5920310522441
+768.7414427765165
+770.8968811363039
+773.0583630294111
+775.2259054010183
+777.3995252438195
+779.5792395981537
+781.765065552138
+783.9570202418024
+786.1551208512234
+788.3593846126597
+790.5698288066865
+792.7864707623309
+795.0093278572086
+797.2384175176593
+799.4737572188831
+801.7153644850787
+803.9632568895797
+806.2174520549937
+808.4779676533383
+810.7448214061807
+813.0180310847782
+815.2976145102144
+817.5835895535421
+819.8759741359219
+822.1747862287616
+824.480043853858
+826.7917650835394
+829.109968040806
+831.4346708994727
+833.7658918843098
+836.1036492711884
+838.447961387222
+840.7988466109101
+843.1563233722843
+845.5204101530497
+847.8911254867327
+850.268487958824
+852.6525162069256
+855.043228920897
+857.4406448430004
+859.8447827680498
+862.2556615435561
+864.6733000698766
+867.0977173003621
+869.5289322415053
+871.9669639530903
+874.4118315483431
+876.8635541940805
+879.322151110859
+881.7876415731274
+884.2600449093766
+886.7393805022928
+889.2256677889077
+891.7189262607517
+894.2191754640077
+896.7264349996603
+899.2407245236565
+901.7620637470516
+904.2904724361706
+906.8259704127589
+909.3685775541408
+911.9183137933724
+914.4751991193983
+917.0392535772118
+919.6104972680068
+922.18895034934
+924.7746330352851
+927.3675655965947
+929.9677683608575
+932.5752617126558
+935.1900660937296
+937.8122020031334
+940.4416899973988
+943.0785506906938
+945.7228047549867
+948.3744729202062
+951.0335759744047
+953.7001347639222
+956.3741701935471
+959.0557032266831
+961.7447548855114
+964.4413462511574
+967.1454984638538
+969.8572327231082
+972.5765702878673
+975.3035324766865
+978.038140667894
+980.78041629976
+983.5303808706647
+986.2880559392662
+989.0534631246705
+991.8266241066004
+994.6075606255647
+997.3962944830304
+1000.1928475415913
+1002.997241725142
+1005.8094990190481
+1008.6296414703187
+1011.4576911877793
+1014.2936703422463
+1017.1376011666987
+1019.9895059564535
+1022.8494070693422
+1025.7173269258824
+1028.593288009456
+1031.4773128664845
+1034.3694241066091
+1037.2696444028618
+1040.1779964918474
+1043.0945031739234
+1046.0191873133717
+1048.9520718385857
+1051.8931797422445
+1054.8425340814974
+1057.8001579781408
+1060.766074618801
+1063.7403072551176
+1066.7228792039236
+1069.7138138474302
+1072.713134633408
+1075.7208650753705
+1078.7370287527624
+1081.7616493111384
+1084.7947504623544
+1087.8363559847496
+1090.8864897233352
+1093.9451755899797
+1097.012437563597
+1100.0882996903342
+1103.1727860837598
+1106.265920925055
+1109.3677284632
+1112.4782330151652
+1115.5974589661037
+1118.72543076954
+1121.8621729475624
+1125.007710091017
+1128.162066859697
+1131.3252679825403
+1134.4973382578196
+1137.67830255334
+1140.8681858066293
+1144.0670130251392
+1147.274809286437
+1150.4915997384037
+1153.7174095994335
+1156.9522641586254
+1160.19618877599
+1163.4492088826412
+1166.711349980997
+1169.9826376449819
+1173.2630975202271
+1176.5527553242666
+1179.851636846747
+1183.159767949622
+1186.477174567361
+1189.803882707147
+1193.1399184490854
+1196.4853079464058
+1199.8400774256686
+1203.204253186967
+1206.5778616041396
+1209.9609291249694
+1213.3534822713975
+1216.7555476397283
+1220.1671519008369
+1223.5883218003826
+1227.0190841590133
+1230.4594658725784
+1233.9094939123402
+1237.3691953251844
+1240.8385972338292
+1244.3177268370462
+1247.806611409865
+1251.3052783037892
+1254.8137549470152
+1258.332068844643
+1261.860247578891
+1265.3983188093162
+1268.9463102730283
+1272.5042497849086
+1276.0721652378256
+1279.6500846028562
+1283.2380359295046
+1286.8360473459204
+1290.4441470591216
+1294.062363355214
+1297.6907245996133
+1301.3292592372682
+1304.9779957928836
+1308.6369628711413
+1312.3061891569278
+1315.985703415559
+1319.675534493001
+1323.3757113161043
+1327.0862628928226
+1330.8072183124439
+1334.5386067458198
+1338.2804574455934
+1342.0327997464256
+1345.795663065229
+1349.5690769013959
+1353.3530708370308
+1357.1476745371817
+1360.9529177500744
+1364.7688303073437
+1368.5954421242673
+1372.4327832000029
+1376.2808836178187
+1380.1397735453336
+1384.009483234751
+1387.8900430230988
+1391.7814833324644
+1395.6838346702334
+1399.597127629332
+1403.5213928884618
+1407.4566612123456
+1411.402963451964
+1415.3603305448
+1419.3287935150804
+1423.30838347402
+1427.2991316200666
+1431.3010692391372
+1435.314227704878
+1439.3386384788973
+1443.3743331110186
+1447.421343239528
+1451.4797005914186
+1455.5494369826426
+1459.630584318357
+1463.7231745931795
+1467.827239891434
+1471.9428123874047
+1476.0699243455883
+1480.2086081209457
+1484.358896159157
+1488.5208209968748
+1492.6944152619792
+1496.8797116738351
+1501.0767430435467
+1505.2855422742173
+1509.5061423612026
+1513.7385763923764
+1517.9828775483838
+1522.239079102904
+1526.5072144229102
+1530.7873169689335
+1535.0794202953196
+1539.3835580505
+1543.6997639772487
+1548.0280719129503
+1552.3685157898653
+1556.721129635394
+1561.0859475723455
+1565.4630038192042
+1569.852332690397
+1574.2539685965653
+1578.6679460448295
+1583.0942996390663
+1587.5330640801772
+1591.9842741663558
+1596.4479647933679
+1600.9241709548232
+1605.4129277424438
+1609.914270346347
+1614.4282340553175
+1618.954854257085
+1623.4941664386008
+1628.046206186315
+1632.6110091864593
+1637.1886112253233
+1641.7790481895356
+1646.3823560663461
+1650.998570943908
+1655.627729011561
+1660.269866560112
+1664.9250199821258
+1669.5932257722009
+1674.2745205272677
+1678.9689409468642
+1683.6765238334306
+1688.397306092596
+1693.1313247334679
+1697.87861686892
+1702.6392197158866
+1707.4131705956536
+1712.2005069341462
+1717.0012662622305
+1721.8154862160025
+1726.6432045370846
+1731.4844590729206
+1736.3392877770732
+1741.2077287095196
+1746.0898200369559
+1750.9856000330892
+1755.8951070789394
+1760.8183796631415
+1765.7554563822503
+1770.7063759410364
+1775.6711771527937
+1780.6498989396432
+1785.6425803328375
+1790.649260473067
+1795.669978610768
+1800.7047741064275
+1805.7536864308945
+1810.8167551656884
+1815.8940200033098
+1820.98552074755
+1826.091297313806
+1831.2113897293902
+1836.3458381338476
+1841.494682779266
+1846.6579640305958
+1851.8357223659652
+1857.027998376996
+1862.234832769123
+1867.4562663619147
+1872.6923400893893
+1877.9430950003407
+1883.2085722586542
+1888.488813143636
+1893.7838590503316
+1899.0937514898524
+1904.4185320897002
+1909.7582425940957
+1915.1129248643033
+1920.48262087896
+1925.8673727344062
+1931.2672226450122
+1936.6822129435136
+1942.1123860813389
+1947.557784628944
+1953.018451276148
+1958.4944288324652
+1963.9857602274396
+1969.4924885109876
+1975.0146568537257
+1980.5523085473183
+1986.1054870048138
+1991.6742357609814
+1997.2585984726568
+2002.8586189190848
+2008.474341002258
+2014.1058087472647
+2019.7530663026355
+2025.4161579406841
+2031.0951280578568
+2036.790021175084
+2042.5008819381235
+2048.2277551179145
+2053.9706856109283
+2059.7297184395165
+2065.5048987522687
+2071.2962718243652
+2077.10388305793
+2082.927777982389
+2088.768002254826
+2094.62460166034
+2100.497622112403
+2106.387109653224
+2112.2931104541053
+2118.2156708158113
+2124.1548371689237
+2130.110656074209
+2136.08317422298
+2142.072438437472
+2148.0784956711996
+2154.101393009326
+2160.141177669036
+2166.197896999907
+2172.2715984842735
+2178.3623297376075
+2184.4701385088824
+2190.595072680959
+2196.7371802709526
+2202.8965094306072
+2209.0731084466843
+2215.267025741327
+2221.478309872454
+2227.707009534127
+2233.9531735569444
+2240.216850908413
+2246.498090693343
+2252.7969421542234
+2259.113454671611
+2265.4476777645227
+2271.799661090817
+2278.1694544475836
+2284.5571077715394
+2290.9626711394167
+2297.386194768352
+2303.8277290162882
+2310.2873243823597
+2316.765031507295
+2323.260901173812
+2329.7749843070155
+2336.307331974802
+2342.8579953882436
+2349.4270259020104
+2356.0144750147606
+2362.620394369546
+2369.2448357542207
+2375.8878511018397
+2382.5494924910736
+2389.229812146615
+2395.928862439586
+2402.6466958879478
+2409.3833651569153
+2416.138923059372
+2422.913422556278
+2429.7069167570858
+2436.519458920164
+2443.3511024532077
+2450.2019009136575
+2457.071908009127
+2463.9611775978096
+2470.8697636889137
+2477.7977204430854
+2484.745102172822
+2491.7119633429115
+2498.6983585708495
+2505.7043426272726
+2512.729970436385
+2519.7752970763886
+2526.840377779921
+2533.9252679344804
+2541.0300230828643
+2548.154698923603
+2555.2993513114034
+2562.464036257574
+2569.6488099304725
+2576.8537286559476
+2584.0788489177717
+2591.3242273580936
+2598.5899207778775
+2605.875986137348
+2613.18248055644
+2620.509461315242
+2627.856985854449
+2635.225111775813
+2642.613896842587
+2650.023398979991
+2657.4536762756543
+2664.9047869800756
+2672.3767895070823
+2679.869742434282
+2687.3837045035248
+2694.9187346213707
+2702.4748918595383
+2710.052235455376
+2717.6508248123273
+2725.270719500395
+2732.911979256605
+2740.5746639854788
+2748.2588337594957
+2755.9645488195774
+2763.691869575548
+2771.440856606614
+2779.2115706618342
+2787.004072660602
+2794.818423693118
+2802.6546850208742
+2810.5129180771223
+2818.3931844673725
+2826.295545969864
+2834.220064536054
+2842.1668022911017
+2850.135821534359
+2858.1271847398516
+2866.1409545567767
+2874.177193809989
+2882.235965500495
+2890.3173328059465
+2898.421359081141
+2906.5481078585035
+2914.6976428486055
+2922.870027940646
+2931.065327202962
+2939.2836048835306
+2947.5249254104688
+2955.7893533925417
+2964.0769536196685
+2972.387791063426
+2980.721930877568
+2989.0794383985253
+2997.4603791459226
+3005.864818823096
+3014.292823317596
+3022.7444587017208
+3031.219791233022
+3039.7188873548275
+3048.2418136967613
+3056.788637075271
+3065.359424494145
+3073.954243145041
+3082.5731604080124
+3091.2162438520363
+3099.883561235543
+3108.5751805069476
+3117.291169805183
+3126.031597460233
+3134.7965319936707
+3143.58604211919
+3152.4001967431504
+3161.239064965114
+3170.1027160783874
+3178.9912195705706
+3187.904645124089
+3196.8430626167533
+3205.806542122294
+3214.7951539109254
+3223.808968449886
+3232.848056403997
+3241.912488636209
+3251.0023362081643
+3260.117670380751
+3269.258562614663
+3278.4250845709594
+3287.6173081116276
+3296.8353053001415
+3306.079148402034
+3315.348909885458
+3324.64466242176
+3333.9664788860414
+3343.314432357736
+3352.6885961211856
+3362.089043666206
+3371.5158486886708
+3380.969085091084
+3390.44882698316
+3399.9551486824093
+3409.4881247147155
+3419.0478298149255
+3428.6343389274266
+3438.2477272067417
+3447.8880700181153
+3457.555442938107
+3467.24992175518
+3476.971582470297
+3486.72050129752
+3496.496754664598
+3506.3004192135777
+3516.1315718013943
+3525.9902895004807
+3535.876649599374
+3545.7907296033077
+3555.732607234836
+3565.702360434434
+3575.700067361107
+3585.72580639301
+3595.779656128063
+3605.8616953845535
+3615.9720032017713
+3626.1106588406183
+3636.2777417842303
+3646.473331738607
+3656.6975086332295
+3666.950352621687
+3677.2319440823126
+3687.542363618804
+3697.881692060861
+3708.2500104648216
+3718.647400114288
+3729.073942520775
+3739.5297194243394
+3750.0148127942307
+3760.5293048295225
+3771.0732779597624
+3781.646814845622
+3792.2499983795406
+3802.882911686374
+3813.545638124051
+3824.2382612842225
+3834.960864992917
+3845.7135333111987
+3856.496350535827
+3867.309401199917
+3878.152770073603
+3889.026542164703
+3899.930802719383
+3910.8656372228284
+3921.8311313999093
+3932.827371215862
+3943.854442876949
+3954.9124328311464
+3966.001427768817
+3977.121514623394
+3988.2727805720547
+3999.4553130364106
+4010.66919968319
+4021.9145284249266
+4033.1913874206466
+4044.4998650765597
+4055.8400500467615
+4067.2120312339102
+4078.615897789941
+4090.0517391167546
+4101.519644866924
+4113.019704944393
+4124.552009505185
+4136.1166489581055
+4147.713713965455
+4159.343295443735
+4171.0054845643635
+4182.700372754399
+4194.428051697235
+4206.1886133333355
+4217.98214986096
+4229.808753736866
+4241.668517677058
+4253.561534657497
+4265.487897914835
+4277.447700947141
+4289.44103751465
+4301.468001640473
+4313.528687611365
+4325.623189978435
+4337.751603557903
+4349.914023431835
+4362.110544948903
+4374.341263725114
+4386.606275644572
+4398.9056768602295
+4411.239563794634
+4423.608033140682
+4436.011181862393
+4448.449107195653
+4460.921906648981
+4473.429678004307
+4485.972519317711
+4498.550528920226
+4511.163805418573
+4523.812447695967
+4536.496554912866
+4549.216226507765
+4561.971562197969
+4574.762661980377
+4587.5896261322605
+4600.452555212054
+4613.35155006015
+4626.286711799668
+4639.258141837285
+4652.2659418639905
+4665.310213855898
+4678.3910600750605
+4691.508583070249
+4704.662885677772
+4717.854071022268
+4731.082242517532
+4744.347503867308
+4757.649959066115
+4770.989712400055
+4784.366868447634
+4797.781532080579
+4811.233808464663
+4824.723803060533
+4838.2516216245185
+4851.817370209497
+4865.421155165681
+4879.063083141484
+4892.743261084339
+4906.461796241551
+4920.218796161127
+4934.014368692631
+4947.848621988012
+4961.721664502462
+4975.633604995265
+4989.584552530659
+5003.574616478672
+5017.603906515994
+5031.672532626831
+5045.780605103768
+5059.928234548637
+5074.115531873383
+5088.342608300921
+5102.6095753660275
+5116.916544916215
+5131.263629112576
+5145.650940430707
+5160.078591661562
+5174.546695912347
+5189.055366607397
+5203.604717489087
+5218.194862618691
+5232.8259163773055
+5247.497993466735
+5262.21120891038
+5276.96567805416
+5291.761516567408
+5306.598840443774
+5321.477766002141
+5336.398409887517
+5351.360889071992
+5366.365320855602
+5381.411822867294
+5396.500513065824
+5411.631509740684
+5426.804931513036
+5442.020897336635
+5457.279526498765
+5472.580938621181
+5487.92525366103
+5503.312591911805
+5518.743074004288
+5534.216820907487
+5549.733953929595
+5565.294594718928
+5580.898865264893
+5596.546887898931
+5612.238785295491
+5627.974680472969
+5643.754696794706
+5659.5789579699185
+5675.447588054695
+5691.360711452955
+5707.318452917434
+5723.320937550645
+5739.368290805884
+5755.460638488189
+5771.598106755335
+5787.780822118838
+5804.008911444924
+5820.282501955534
+5836.6017212293245
+5852.96669720266
+5869.377558170623
+5885.8344327880095
+5902.3374500703485
+5918.88673939492
+5935.482430501744
+5952.1246534946185
+5968.813538842137
+5985.549217378703
+6002.331820305559
+6019.161479191824
+6036.038325975507
+6052.962492964565
+6069.93411283792
+6086.9533186465005
+6104.020243814296
+6121.1350221394005
+6138.297787795051
+6155.508675330697
+6172.767819673035
+6190.075356127078
+6207.431420377218
+6224.836148488286
+6242.289676906619
+6259.792142461123
+6277.343682364355
+6294.944434213602
+6312.5945359919515
+6330.294126069369
+6348.043343203796
+6365.842326542226
+6383.691215621802
+6401.590150370915
+6419.539271110285
+6437.538718554073
+6455.588633810987
+6473.689158385381
+6491.840434178356
+6510.0426034889015
+6528.295809014979
+6546.6001938546615
+6564.9559015072455
+6583.363075874375
+6601.8218612611745
+6620.33240237739
+6638.894844338494
+6657.509332666849
+6676.176013292847
+6694.895032556041
+6713.6665372063
+6732.490674404961
+6751.367591725978
+6770.2974371570745
+6789.280359100919
+6808.316506376276
+6827.406028219176
+6846.549074284085
+6865.745794645072
+6884.996339797004
+6904.30086065671
+6923.659508564162
+6943.072435283672
+6962.5397930050785
+6982.061734344933
+7001.6384123476955
+7021.2699804869535
+7040.956592666612
+7060.69840322209
+7080.495566921541
+7100.3482389670735
+7120.256574995957
+7140.220731081844
+7160.240863735994
+7180.317129908501
+7200.449686989531
+7220.638692810538
+7240.884305645517
+7261.186684212238
+7281.545987673499
+7301.962375638361
+7322.436008163409
+7342.967045754
+7363.555649365525
+7384.201980404679
+7404.9062007306975
+7425.668472656669
+7446.48895895077
+7467.367822837556
+7488.305227999243
+7509.30133857699
+7530.3563191721805
+7551.470334847718
+7572.643551129314
+7593.876134006792
+7615.168249935395
+7636.520065837067
+7657.931749101792
+7679.403467588876
+7700.935389628291
+7722.527684021976
+7744.180520045161
+7765.894067447705
+7787.668496455423
+7809.503977771416
+7831.400682577403
+7853.358782535088
+7875.378449787473
+7897.45985696023
+7919.603177163052
+7941.8085839910045
+7964.076251525881
+7986.406354337586
+8008.799067485481
+8031.2545665197795
+8053.773027482905
+8076.35462691088
+8098.999541834712
+8121.7079497817695
+8144.480028777185
+8167.315957345251
+8190.215914510809
+8213.180079800673
+8236.208633245005
+8259.301755378752
+8282.459627243066
+8305.682430386705
+8328.97034686746
+8352.32355925358
+8375.742250625224
+8399.226604575875
+8422.776805213774
+8446.39303716339
+8470.075485566833
+8493.824336085363
+8517.639774900756
+8541.521988716842
+8565.471164760947
+8589.487490785343
+8613.571155068736
+8637.722346417731
+8661.941254168336
+8686.228068187407
+8710.582978874178
+8735.006177161724
+8759.497854518471
+8784.058202949695
+8808.687414999027
+8833.385683749955
+8858.153202827356
+8882.990166399006
+8907.89676917708
+8932.873206419712
+8957.919673932507
+8983.036368070083
+9008.223485737602
+9033.48122439233
+9058.809782045157
+9084.209357262174
+9109.68014916624
+9135.222357438493
+9160.83618231998
+9186.521824613172
+9212.279485683572
+9238.109367461268
+9264.011672442542
+9289.98660369146
+9316.034364841416
+9342.155160096785
+9368.3491942345
+9394.616672605656
+9420.957801137121
+9447.37278633315
+9473.861835277012
+9500.4251556326
+9527.062955646074
+9553.775444147474
+9580.562830552373
+9607.425324863525
+9634.36313767249
+9661.376480161309
+9688.465564104126
+9715.630601868876
+9742.871806418956
+9770.18939131487
+9797.58357071591
+9825.054559381846
+9852.602572674603
+9880.227826559947
+9907.930537609192
+9935.710923000863
+9963.56920052244
+9991.505588572038
+10019.520306160137
+10047.61357291127
+10075.785609065802
+10104.036635481578
+10132.366873635718
+10160.77654562635
+10189.265874174285
+10217.835082624859
+10246.484394949606
+10275.214035748051
+10304.02423024947
+10332.915204314626
+10361.887184437588
+10390.940397747478
+10420.075072010231
+10449.29143563044
+10478.589717653093
+10507.97014776538
+10537.43295629851
+10566.97837422949
+10596.606633182986
+10626.317965433082
+10656.112603905123
+10685.990782177549
+10715.952734483722
+10745.998695713759
+10776.128901416365
+10806.3435878007
+10836.642991738217
+10867.027350764529
+10897.496903081234
+10928.051887557856
+10958.692543733647
+10989.419111819494
+11020.23183269981
+11051.130947934409
+11082.116699760392
+11113.189331094074
+11144.34908553285
+11175.59620735715
+11206.93094153232
+11238.353533710557
+11269.86423023283
+11301.463278130794
+11333.150925128773
+11364.927419645666
+11396.793010796877
+11428.747948396333
+11460.792482958372
+11492.926865699748
+11525.151348541596
+11557.46618411139
+11589.87162574494
+11622.367927488373
+11654.955344100124
+11687.634131052937
+11720.404544535857
+11753.266841456236
+11786.221279441796
+11819.268116842544
+11852.40761273293
+11885.640026913768
+11918.96561991434
+11952.384652994398
+11985.897388146232
+12019.504088096717
+12053.205016309383
+12087.000436986476
+12120.890615071014
+12154.875816248874
+12188.956306950895
+12223.132354354939
+12257.404226387998
+12291.772191728285
+12326.236519807353
+12360.797480812207
+12395.455345687413
+12430.210386137214
+12465.062874627687
+12500.013084388856
+12535.06128941685
+12570.207764476028
+12605.452785101168
+12640.796627599599
+12676.239569053365
+12711.781887321411
+12747.423861041776
+12783.165769633737
+12819.007893300022
+12854.950513029034
+12890.993910596992
+12927.1383685702
+12963.384170307221
+12999.731599961113
+13036.180942481667
+13072.732483617634
+13109.386509918946
+13146.143308738998
+13183.003168236863
+13219.966377379586
+13257.033225944426
+13294.204004521134
+13331.47900451424
+13368.858518145322
+13406.342838455306
+13443.932259306757
+13481.627075386199
+13519.427582206408
+13557.334076108727
+13595.346854265405
+13633.466214681926
+13671.692456199313
+13710.025878496523
+13748.466782092759
+13787.015468349828
+13825.672239474517
+13864.43739852095
+13903.31124939299
+13942.294096846595
+13981.38624649219
+14020.58800479711
+14059.899679087981
+14099.32157755312
+14138.854009244955
+14178.497284082458
+14218.251712853578
+14258.117607217644
+14298.095279707852
+14338.185043733687
+14378.387213583392
+14418.702104426424
+14459.130032315934
+14499.671314191228
+14540.326267880266
+14581.095212102171
+14621.978466469702
+14662.976351491736
+14704.089188575843
+14745.31730003076
+14786.661009068928
+14828.120639809036
+14869.69651727855
+14911.388967416255
+14953.198317074834
+14995.124894023433
+15037.169026950174
+15079.331045464807
+15121.61128010124
+15164.010062320154
+15206.527724511605
+15249.16459999761
+15291.921023034782
+15334.797328816943
+15377.793853477724
+15420.910934093265
+15464.148908684783
+15507.50811622128
+15550.98889662217
+15594.59159075995
+15638.316540462863
+15682.164088517615
+15726.134578672025
+15770.228355637704
+15814.445765092809
+15858.787153684734
+15903.252869032805
+15947.84325973103
+15992.558675350827
+16037.399466443749
+16082.36598454425
+16127.458582172447
+16172.677612836847
+16218.023431037162
+16263.496392267074
+16309.096853017
+16354.8251707769
+16400.681704039107
+16446.666812301115
+16492.780856068344
+16539.024196857114
+16585.397197197275
+16631.90022063524
+16678.533631736693
+16725.297796089555
+16772.1930803068
+16819.219852029277
+16866.378479928706
+16913.669333710503
+16961.092784116623
+17008.64920292861
+17056.338962970367
+17104.162438111183
+17152.12000326859
+17200.21203441135
+17248.43890856237
+17296.801003801695
+17345.298699269442
+17393.93237516878
+17442.70241276891
+17491.609194408087
+17540.653103496534
+17589.834524519538
+17639.15384304039
+17688.611445703493
+17738.2077202373
+17787.943055457417
+17837.817841269636
+17887.832468672987
+17937.987329762804
+17988.28281773379
+18038.71932688313
+18089.297252613527
+18140.01699143633
+18190.87894097468
+18241.883499966614
+18293.031068268134
+18344.322046856374
+18395.75683783277
+18447.335844426172
+18499.059470996053
+18550.928123035646
+18602.942207175103
+18655.102131184736
+18707.40830397814
+18759.86113561549
+18812.461037306708
+18865.208421414656
+18918.10370145843
+18971.14729211657
+19024.339609230276
+19077.681069806746
+19131.17209202242
+19184.813095226207
+19238.604499942798
+19292.546727876022
+19346.64020191207
+19400.885346122865
+19455.282585769335
+19509.832347304797
+19564.535058378282
+19619.3911478379
+19674.401045734136
+19729.565183323324
+19784.883993070966
+19840.357908655118
+19895.98736496984
+19951.7727981285
+20007.71464546736
+20063.813345548846
+20120.069338165074
+20176.48306434126
+20233.05496633917
+20289.785487660654
+20346.675073051065
+20403.724168502722
+20460.93322125846
+20518.30267981514
+20575.832993927113
+20633.52461460977
+20691.37799414313
+20749.393586075294
+20807.571845226033
+20865.91322769042
+20924.418190842327
+20983.087193338
+21041.92069511976
+21100.919157419474
+21160.083042762275
+21219.41281497014
+21278.90893916553
+21338.571881775024
+21398.40211053303
+21458.400094485387
+21518.566303993073
+21578.90121073591
+21639.4052877162
+21700.07900926254
+21760.922851033403
+21821.937290020993
+21883.122804554878
+21944.479874305835
+22006.00898028956
+22067.710604870445
+22129.58523176535
+22191.63334604741
+22253.85543414983
+22316.25198386972
+22378.82348437189
+22441.570426192702
+22504.49330124391
+22567.592602816487
+22630.86882558457
+22694.322465609268
+22757.95402034256
+22821.76398863121
+22885.7528707207
+22949.921168259094
+23014.269384301042
+23078.798023311654
+23143.5075911705
+23208.398595175524
+23273.47154404715
+23338.726947932104
+23404.16531840751
+23469.78716848485
+23535.59301261406
+23601.583366687497
+23667.758748044023
+23734.11967547302
+23800.666669218463
+23867.40025098306
+23934.320943932275
+24001.429272698453
+24068.725763384937
+24136.210943570157
+24203.885342311834
+24271.749490151058
+24339.80391911651
+24408.0491627286
+24476.485756003618
+24545.114235457975
+24613.935139112404
+24682.949006496165
+24752.15637865128
+24821.557798136786
+24891.15380903293
+24960.944956945557
+25030.931789010236
+25101.114853896677
+25171.494701812946
+25242.071884509805
+25312.8469552851
+25383.820468987986
+25454.992982023334
+25526.36505235615
+25597.937239515843
+25669.71010460067
+25741.6842102821
+25813.86012080931
+25886.238402013518
+25958.819621312425
+26031.604347714732
+26104.593151824527
+26177.78660584579
+26251.185283586892
+26324.789760465083
+26398.600613510982
+26472.618421373103
+26546.843764322453
+26621.277224256988
+26695.919384706245
+26770.770830835885
+26845.832149452275
+26921.103929007153
+26996.586759602116
+27072.281232993377
+27148.1879425963
+27224.307483490138
+27300.64045242265
+27377.187447814747
+27453.94906976529
+27530.925920055706
+27608.118602154707
+27685.527721223065
+27763.153884118317
+27840.99769939956
+27919.059777332175
+27997.340729892676
+28075.84117077343
+28154.56171538754
+28233.50298087361
+28312.665586100633
+28392.0501516728
+28471.657299934395
+28551.487654974666
+28631.54184263272
+28711.820490502414
+28792.324227937286
+28873.053686055493
+28954.009497744766
+29035.192297667323
+29116.602722264943
+29198.241409763847
+29280.109000179757
+29362.206135322907
+29444.53345880309
+29527.09161603466
+29609.88125424164
+29692.903022462768
+29776.15757155657
+29859.645554206538
+29943.367624926133
+30027.324440064
+30111.516657809098
+30195.944938195822
+30280.609943109266
+30365.51233629029
+30450.65278334083
+30536.03195172904
+30621.650510794578
+30707.509131753803
+30793.6084877051
+30879.949253634113
+30966.532106419036
+31053.357724835954
+31140.42678956413
+31227.73998319134
+31315.29799021924
+31403.101497068747
+31491.15119208535
+31579.44776554463
+31667.991909657576
+31756.784318575985
+31845.825688398
+31935.116717173525
+32024.65810490969
+32114.450553576324
+32204.494767111486
+32294.791451426972
+32385.34131441387
+32476.14506594807
+32567.20341789585
+32658.517084119474
+32750.086780482747
+32841.913224856646
+32933.99713712501
+33026.33923919005
+33118.940254978166
+33211.80091044549
+33304.92193358361
+33398.30405442534
+33491.94800505036
+33585.85451959108
+33680.02433423814
+33774.458187246535
+33869.156818941105
+33964.120971722485
+34059.351390072945
+34154.848820562096
+34250.61401185283
+34346.64771470722
+34442.95068199233
+34539.52366868615
+34636.367431883606
+34733.48273080225
+34830.870326788514
+34928.53098332341
+35026.4654660288
+35124.674542673085
+35223.15898317745
+35321.91955962177
+35420.95704625078
+35520.27221948007
+35619.86585790221
+35719.73874229275
+35819.89165561646
+35920.32538303349
+36021.040711905356
+36122.038431801295
+36223.31933450437
+36324.88421401764
+36426.73386657051
+36528.869090624816
+36631.290686881206
+36733.99945828543
+36836.996210034464
+36940.281749582944
+37043.85688664964
+37147.72243322354
+37251.87920357034
+37356.32801423879
+37461.069684067195
+37566.10503418976
+37671.434888042924
+37777.06007137204
+37882.98141223767
+37989.19974102213
+38095.71589043604
+38202.53069552484
+38309.64499367523
+38417.05962462189
+38524.775430453985
+38632.79325562173
+38741.113946943085
+38849.73835361041
+38958.667327197014
+39067.901721663875
+39177.44239336639
+39287.29020106109
+39397.44600591226
+39507.91067149881
+39618.68506382099
+39729.77005130717
+39841.16650482067
+39952.87529766659
+40064.89730559867
+40177.233406826104
+40289.88448202046
+40402.85141432258
+40516.13508934957
+40629.73639520154
+40743.6562224688
+40857.89546423877
+40972.45501610288
+41087.335776163716
+41202.53864504192
+41318.0645258835
+41433.914324366604
+41550.088948708915
+41666.589309674484
+41783.41632058108
+41900.570897307254
+42018.05395829962
+42135.86642457995
+42254.00921975231
+42372.483270010554
+42491.28950414538
+42610.428853551755
+42729.90225223603
+42849.71063682347
+42969.85494656547
+43090.33612334691
+43211.15511169357
+43332.312858779645
+43453.810314434966
+43575.64843115258
+43697.82816409623
+43820.35047110771
+43943.216312714554
+44066.426652137416
+44189.982455297664
+44313.88469082499
+44438.134330065004
+44562.73234708684
+44687.67971869069
+44812.977424415665
+44938.62644654729
+45064.627770125255
+45190.982382951224
+45317.691275596495
+45444.75544140974
+45572.17587652487
+45699.95357986879
+45828.08955316927
+45956.58480096279
+46085.44033060237
+46214.65715226551
+46344.23627896206
+46474.17872654232
+46604.485513704785
+46735.157662004254
+46866.19619585981
+46997.60214256288
+47129.376532285234
+47261.520398087094
+47394.03477592526
+47526.92070466121
+47660.17922606921
+47793.81138484449
+47927.81822861151
+48062.20080793206
+48196.96017631356
+48332.097390217365
+48467.613509066956
+48603.50959525622
+48739.786714157985
+48876.445934132076
+49013.488326533945
+49150.914965722906
+49288.72692907066
+49426.92529696967
+49565.5111528417
+49704.485583146205
+49843.84967738901
+49983.604528130665
+50123.75123099515
+50264.29088467839
+50405.22459095692
+50546.55345469647
+50688.27858386062
+50830.401089519575
+50972.9220858588
+51115.84269018777
+51259.16402294875
+51402.887207725544
+51547.01337125228
+51691.543643422374
+51836.47915729722
+51981.82104911514
+52127.5704583004
+52273.72852747194
+52420.29640245249
+52567.27523227755
+52714.66616920421
+52862.470368720424
+53010.68898955391
+53159.32319368136
+53308.374146337446
+53457.84301602392
+53607.73097451892
+53758.03919688605
+53908.768861483644
+54059.92114997397
+54211.497247332445
+54363.49834185706
+54515.92562517759
+54668.780292264935
+54822.0635414406
+54975.77657438594
+55129.92059615169
+55284.49681516734
+55439.50644325063
+55594.95069561709
+55750.83079088956
+55907.14795110762
+56063.90340173735
+56221.09837168084
+56378.73409328582
+56536.811802355405
+56695.33273815768
+56854.29814343542
+57013.70926441596
+57173.567350820755
+57333.87365587542
+57494.62943631935
+57655.835952415626
+57817.49446796105
+57979.606250295816
+58142.172570313545
+58305.194702471344
+58468.67392479962
+58632.61151891224
+58797.008770016546
+58961.8669669234
+59127.187402057236
+59292.97137146637
+59459.22017483293
+59625.93511548326
+59793.11750039797
+59960.768640222326
+60128.88984927636
+60297.4824455653
+60466.54775078992
+60636.08709035676
+60806.10179338875
+60976.5931927353
+61147.56262498307
+61319.011430466206
+61490.940953277095
+61663.35254127665
+61836.24754610499
+62009.62732319214
+62183.49323176843
+62357.84663487531
+62532.68889937601
+62708.02139596631
+62883.84549918509
+63060.16258742529
+63236.97404294473
+63414.281251876775
+63592.08560424134
+63770.388493955776
+63949.19131884581
+64128.49548065637
+64308.30238506271
+64488.61344168142
+64669.43006408142
+64850.75366979509
+65032.58568032931
+65214.92752117673
+65397.78062182687
+65581.14641577729
+65765.02634054486
+65949.42183767704
+66134.3343527632
+66319.76533544596
+66505.71623943246
+66692.18852250582
+66879.18364653668
+67066.70307749443
+67254.74828545879
+67443.32074463158
+67632.42193334784
+67822.05333408773
+68012.21643348811
+68202.91272235407
+68394.14369567076
+68585.91085261504
+68778.21569656726
+68971.05973512295
+69164.44448010481
+69358.37144757445
+69552.8421578442
+69747.85813548922
+69943.42090935932
+70139.53201259107
+70336.19298261956
+70533.40536119077
+70731.17069437337
+70929.49053257116
+71128.36643053495
+71327.7999473748
+71527.7926465723
+71728.3460959929
+71929.461867898
+72131.14153895751
+72333.38669026208
+72536.19890733525
+72739.57978014654
+72943.53090312329
+73148.05387516333
+73353.15029964762
+73558.82178445293
+73765.06994196394
+73971.89638908656
+74179.30274726005
+74387.29064247
+74595.86170526122
+74805.01757074994
+75014.75987863734
+75225.0902732219
+75436.01040341258
+75647.5219227417
+75859.6264893776
+76072.3257661381
+76285.62142050327
+76499.51512462845
+76714.00855535766
+76929.10339423628
+77144.80132752476
+77361.10404621135
+77578.01324602569
+77795.53062745203
+78013.65789574246
+78232.3967609304
+78451.74893784393
+78671.7161461193
+78892.30011021426
+79113.50255942171
+79335.32522788335
+79557.76985460313
+79780.83818346084
+80004.53196322588
+80228.8529475709
+80453.80289508562
+80679.38356929069
+80905.59673865128
+81132.44417659112
+81359.9276615064
+81588.04897677964
+81816.80991079361
+82046.21225694561
+82276.25781366132
+82506.94838440885
+82738.28577771306
+82970.27180716967
+83202.90829145923
+83436.19705436191
+83670.1399247713
+83904.73873670911
+84139.99532933916
+84375.91154698217
+84612.48923913
+84849.73026046024
+85087.63647085073
+85326.20973539412
+85565.4519244125
+85805.36491347212
+86045.95058339792
+86287.21082028851
+86529.14751553092
+86771.76256581512
+87015.05787314929
+87259.03534487441
+87503.69689367966
+87749.04443761679
+87995.07990011566
+88241.80520999919
+88489.22230149829
+88737.3331142673
+88986.13959339891
+89235.64368943973
+89485.84735840534
+89736.75256179574
+89988.3612666106
+90240.6754453648
+90493.69707610404
+90747.42814241986
+91001.87063346578
+91257.02654397246
+91512.89787426352
+91769.48663027119
+92026.79482355205
+92284.82447130287
+92543.57759637611
+92803.05622729627
+93063.26239827539
+93324.19814922924
+93585.86552579324
+93848.26657933826
+94111.4033669871
+94375.27795163034
+94639.89240194269
+94905.248792399
+95171.34920329074
+95438.19572074222
+95705.79043672698
+95974.13544908396
+96243.23286153424
+96513.08478369749
+96783.69333110838
+97055.06062523316
+97327.18879348654
+97600.07996924798
+97873.73629187877
+98148.1599067386
+98423.35296520244
+98699.31762467753
+98976.05604861987
+99253.57040655176
+99531.86287407833
+99810.9356329049
+100090.79087085396
+100371.43078188227
+100652.85756609819
+100935.07342977884
+101218.08058538743
+101501.8812515905
+101786.4776532755
+102071.8720215682
+102358.06659384993
+102645.0636137755
+102932.86533129042
+103221.47400264896
+103510.89189043136
+103801.12126356194
+104092.16439732663
+104384.02357339115
+104676.70107981839
+104970.19921108687
+105264.52026810833
+105559.66655824604
+105855.64039533272
+106152.4440996887
+106450.07999814027
+106748.55042403772
+107047.85771727365
+107348.00422430155
+107648.99229815385
+107950.82429846068
+108253.50259146804
+108557.02955005674
+108861.4075537607
+109166.63898878575
+109472.72624802818
+109779.67173109378
+110087.47784431635
+110396.14700077675
+110705.68162032175
+111016.08412958296
+111327.35696199606
+111639.50255781961
+111952.52336415427
+112266.42183496214
+112581.20043108574
+112896.86162026762
+113213.40787716916
+113530.84168339071
+113849.16552749046
+114168.38190500425
+114488.4933184649
+114809.50227742217
+115131.411298462
+115454.22290522663
+115777.93962843418
+116102.56400589852
+116428.09858254925
+116754.54591045139
+117081.90854882578
+117410.18906406884
+117739.39002977281
+118069.5140267459
+118400.56364303252
+118732.54147393364
+119065.450122027
+119399.29219718762
+119734.0703166082
+120069.78710481965
+120406.44519371184
+120744.04722255381
+121082.59583801497
+121422.09369418539
+121762.54345259696
+122103.94778224411
+122446.30935960475
+122789.6308686611
+123133.91500092109
+123479.16445543893
+123825.38193883697
+124172.57016532627
+124520.73185672823
+124869.8697424958
+125219.98655973494
+125571.08505322602
+125923.16797544544
+126276.23808658714
+126630.29815458413
+126985.35095513039
+127341.39927170258
+127698.44589558171
+128056.49362587517
+128415.54526953863
+128775.6036413982
+129136.67156417214
+129498.75186849327
+129861.84739293114
+130225.96098401415
+130591.09549625199
+130957.25379215802
+131324.43874227165
+131692.6532251808
+132061.90012754453
+132432.18234411578
+132803.50277776376
+133175.86433949714
+133549.26994848647
+133923.72253208718
+134299.2250258628
+134675.78037360765
+135053.39152736985
+135432.06144747484
+135811.79310254828
+136192.58946953947
+136574.45353374459
+136957.38828883017
+137341.39673685643
+137726.48188830126
+138112.6467620833
+138499.89438558565
+138888.22779467967
+139277.65003374932
+139668.16415571424
+140059.77322205406
+140452.4803028323
+140846.28847672066
+141241.2008310229
+141637.220461699
+142034.35047338967
+142432.5939794407
+142831.95410192688
+143232.43397167712
+143634.0367282988
+144036.76552020223
+144440.6235046251
+144845.61384765792
+145251.7397242682
+145659.00431832593
+146067.41082262772
+146476.96243892272
+146887.66237793706
+147299.5138593994
+147712.520112066
+148126.68437374625
+148542.00989132762
+148958.49992080152
+149376.15772728866
+149794.98658506467
+150214.98977758578
+150636.17059751446
+151058.5323467455
+151482.07833643167
+151906.81188700948
+152332.73632822573
+152759.85499916328
+153188.17124826726
+153617.68843337154
+154048.40992172444
+154480.33909001583
+154913.47932440342
+155347.8340205391
+155783.40658359556
+156220.20042829323
+156658.21897892674
+157097.4656693923
+157537.94394321393
+157979.65725357085
+158422.60906332458
+158866.80284504592
+159312.2420810424
+159758.9302633852
+160206.87089393684
+160656.06748437858
+161106.52355623784
+161558.24264091617
+162011.22827971628
+162465.48402387032
+162921.0134345676
+163377.82008298254
+163835.90755030265
+164295.27942775632
+164755.93931664122
+165217.89082835295
+165681.13758441253
+166145.6832164952
+166611.5313664591
+167078.6856863735
+167547.1498385476
+168016.9274955592
+168488.02234028306
+168960.4380659208
+169434.17837602898
+169909.24698454814
+170385.64761583257
+170863.38400467875
+171342.45989635537
+171822.879046632
+172304.6452218088
+172787.7621987463
+173272.23376489474
+173758.06371832374
+174245.25586775213
+174733.81403257782
+175223.74204290812
+175715.043739589
+176207.7229742354
+176701.7836092622
+177197.2295179136
+177694.06458429378
+178192.29270339772
+178691.9177811408
+179192.9437343904
+179695.37449099624
+180199.213989821
+180704.4661807716
+181211.13502482968
+181719.2244940829
+182228.73857175623
+182739.68125224288
+183252.05654113583
+183765.8684552591
+184281.12102269928
+184797.8182828373
+185315.96428637957
+185835.56309539053
+186356.61878332365
+186879.13543505414
+187403.11714691023
+187928.5680267059
+188455.49219377284
+188983.89377899247
+189513.776924829
+190045.14578536127
+190578.00452631555
+191112.35732509833
+191648.2083708287
+192185.56186437162
+192724.42201837056
+193264.79305728065
+193806.6792174018
+194350.08474691192
+194895.0139059002
+195441.47096640032
+195989.46021242422
+196538.98593999568
+197090.05245718377
+197642.66408413678
+198196.82515311602
+198752.54000853
+199309.81300696815
+199868.64851723515
+200429.05092038526
+200991.02460975663
+201554.57399100545
+202119.70348214087
+202686.41751355943
+203254.7205280799
+203824.6169809782
+204396.11134002195
+204969.2080855058
+205543.91171028663
+206120.2267198184
+206698.1576321879
+207277.70897814995
+207858.88530116293
+208441.6911574243
+209026.13111590644
+209612.20975839268
+210199.9316795128
+210789.30148677924
+211380.32380062324
+211973.00325443124
+212567.34449458082
+213163.3521804772
+213761.03098459032
+214360.38559249064
+214961.4207028865
+215564.14102766057
+216168.55129190718
+216774.65623396882
+217382.46060547378
+217991.9691713733
+218603.1867099785
+219216.11801299866
+219830.76788557807
+220447.14114633386
+221065.24262739392
+221685.07717443485
+222306.64964671966
+222929.96491713615
+223555.02787223482
+224181.8434122674
+224810.4164512252
+225440.75191687772
+226072.8547508111
+226706.72990846727
+227342.3823591819
+227979.81708622444
+228619.03908683662
+229260.05337227156
+229902.86496783333
+230547.47891291627
+231193.90026104412
+231842.1340799103
+232492.185451417
+233144.05947171568
+233797.76125124647
+234453.29591477846
+235110.6686014495
+235769.8844648076
+236430.9486728498
+237093.8664080638
+237758.64286746824
+238425.2832626534
+239093.79281982206
+239764.17677983042
+240436.44039822946
+241110.58894530602
+241786.6277061237
+242464.5619805649
+243144.39708337217
+243826.13834418962
+244509.79110760492
+245195.36073319145
+245882.85259554983
+246572.27208435003
+247263.62460437455
+247956.91557555928
+248652.15043303746
+249349.33462718135
+250048.47362364532
+250749.57290340879
+251452.6379628186
+252157.67431363315
+252864.68748306442
+253573.6830138223
+254284.66646415726
+254997.6434079046
+255712.61943452794
+256429.6001491624
+257148.5911726597
+257869.59814163114
+258592.62670849235
+259317.68254150785
+260044.77132483467
+260773.89875856772
+261505.07055878403
+262238.29245758755
+262973.5702031542
+263710.90955977706
+264450.31630791194
+265191.7962442208
+265935.3551816207
+266680.99894932494
+267428.7333928928
+268178.5643742728
+268930.49777184986
+269684.53948049084
+270440.695411591
+271198.9714931208
+271959.3736696707
+272721.9079024999
+273486.58016958175
+274253.39646565093
+275022.3628022506
+275793.48520777933
+276566.76972753875
+277342.22242378024
+278119.84937575244
+278899.6566797499
+279681.6504491608
+280465.8368145136
+281252.2219235256
+282040.81194115244
+282831.6130496344
+283624.63144854666
+284419.87335484603
+285217.3450029218
+286017.052644643
+286819.00254940847
+287623.2010041947
+288429.6543136069
+289238.36879992706
+290049.3508031638
+290862.60668110196
+291678.1428093534
+292495.96558140573
+293316.08140867326
+294138.4967205465
+294963.2179644435
+295790.2516058597
+296619.60412841913
+297451.2820339244
+298285.29184240894
+299121.6400921868
+299960.33333990467
+300801.37816059287
+301644.781147718
+302490.548913233
+303338.6880876294
+304189.20531999075
+305042.1072780432
+305897.4006482082
+306755.09213565453
+307615.1884643518
+308477.69637712254
+309342.6226356951
+310209.9740207566
+311079.7573320067
+311951.9793882099
+312826.64702724956
+313703.7671061816
+314583.3465012881
+315465.3921081314
+316349.9108416076
+317236.9096360016
+318126.39544504083
+319018.3752419499
+319912.8560195053
+320809.84479009005
+321709.34858574974
+322611.37445824547
+323515.9294791115
+324423.0207397094
+325332.6553512832
+326244.8404450166
+327159.5831720879
+328076.89070372627
+328996.7702312677
+329919.22896621213
+330844.2741402787
+331771.9130054642
+332702.15283409815
+333635.000918901
+334570.4645730412
+335508.5511301912
+336449.2679445872
+337392.62239108514
+338338.62186521903
+339287.27378325816
+340238.58558226697
+341192.5647201622
+342149.21867577074
+343108.55494888977
+344070.5810603444
+345035.30455204734
+346002.73298705736
+346972.8739496391
+347945.73504532274
+348921.3239009627
+349899.6481647983
+350880.71550651325
+351864.5336172959
+352851.11020989943
+353840.4530187029
+354832.5697997713
+355827.4683309162
+356825.1564117572
+357825.641863783
+358828.93253041257
+359835.0362770565
+360843.96099117893
+361855.71458235924
+362870.30498235417
+363887.7401451602
+364908.028047075
+365931.17668676144
+366957.1940853088
+367986.08828629623
+369017.8673558568
+370052.53938273917
+371090.1124783717
+372130.594776926
+373173.9944353806
+374220.3196335856
+375269.5785743253
+376321.77948338387
+377376.9306096098
+378435.0402249796
+379496.1166246631
+380560.16812708904
+381627.20307400957
+382697.22983056575
+383770.256785353
+384846.2923504882
+385925.3449616738
+387007.42307826446
+388092.5351833344
+389180.6897837423
+390271.8954101994
+391366.1606173361
+392463.4939837681
+393563.90411216434
+394667.3996293143
+395773.9891861965
+396883.68145804456
+397996.4851444165
+399112.40896926314
+400231.46168099507
+401353.65205255285
+402478.98888147506
+403607.4809899667
+404739.1372249699
+405873.9664582314
+407011.97758637316
+408153.17953096237
+409297.581238581
+410445.1916808955
+411596.01985472743
+412750.0747821251
+413907.36551043246
+415067.9011123611
+416231.6906860608
+417398.743355192
+418569.0682689963
+419742.6746023681
+420919.57155592676
+422099.7683560894
+423283.27425514214
+424470.0985313138
+425660.2504888473
+426853.7394580733
+428050.574795484
+429250.7658838054
+430454.32213207113
+431661.2529756965
+432871.56787655264
+434085.2763230401
+435302.38783016347
+436522.9119396063
+437746.8582198054
+438974.2362660257
+440205.05570043664
+441439.3261721863
+442677.0573574781
+443918.25895964535
+445162.94070922834
+446411.11236405047
+447662.7837092945
+448917.9645575802
+450176.66474903957
+451438.8941513949
+452704.6626600366
+453973.9801980999
+455246.85671654367
+456523.3021942269
+457803.3266379887
+459086.94008272537
+460374.15259146964
+461664.97425547
+462959.4151942681
+464257.4855557811
+465559.1955163779
+466864.55528096115
+468173.57508304634
+469486.2651848425
+470802.63587733207
+472122.69748035184
+473446.4603426745
+474773.93484208855
+476105.1313854804
+477440.0604089161
+478778.7323777228
+480121.1577865712
+481467.3471595565
+482817.31105028285
+484171.060041945
+485528.6047474113
+486889.955809307
+488255.1239000979
+489624.11972217355
+490996.9540079316
+492373.63751986175
+493754.1810506305
+495138.59542316466
+496526.89149073744
+497919.08013705263
+499315.172276331
+500715.178853395
+502119.110843754
+503526.97925369226
+504938.7951203533
+506354.5695118274
+507774.3135272377
+509198.03829682834
+510625.75498205057
+512057.4747756508
+513493.208901759
+514932.96861597453
+516376.76520545676
+517824.60998901265
+519276.5143171847
+520732.4895723418
+522192.54716876644
+523656.6985527453
+525124.9552026588
+526597.3286290712
+528073.8303748205
+529554.4720151087
+531039.265157594
+532528.2214424803
+534021.3525426084
+535518.6701635486
+537020.1860436915
+538525.9119543416
+540035.8596998068
+541550.041117494
+543068.4680779992
+544591.1524852018
+546118.1062763601
+547649.3414221999
+549184.8699270121
+550724.703828747
+552268.8551991066
+553817.3361436398
+555370.1588018385
+556927.3353472316
+558488.8779874803
+560054.7989644753
+561625.1105544317
+563199.8250679838
+564778.9548502852
+566362.5122811014
+567950.5097749111
+569542.959781
+571139.8747835597
+572741.2673017862
+574347.1498899776
+575957.535137632
+577572.4356695471
+579191.864145917
+580815.8332624357
+582444.3557503928
+584077.4443767741
+585715.1119443632
+587357.3712918399
+589004.2352938824
+590655.7168612671
+592311.8289409705
+593972.5845162711
+595637.9966068498
+597308.0782688933
+598982.8425951955
+600662.3027152611
+602346.4717954074
+604035.3630388685
+605728.9896858986
+607427.3650138755
+609130.502337404
+610838.4150084222
+612551.1164163055
+614268.6199879696
+615990.9391879779
+617718.0875186472
+619450.0785201514
+621186.9257706312
+622928.6428862963
+624675.2435215357
+626426.7413690217
+628183.15015982
+629944.4836634963
+631710.7556882246
+633481.9800808931
+635258.1707272166
+637039.3415518424
+638825.5065184609
+640616.679629914
+642412.8749283063
+644214.1064951138
+646020.388451295
+647831.7349574021
+649648.1602136914
+651469.6784602331
+653296.3039770268
+655128.0510841088
+656964.9341416678
+658806.9675501571
+660654.1657504056
+662506.543223733
+664364.1144920613
+666226.8941180313
+668094.8967051144
+669968.1368977288
+671846.629381352
+673730.3888826382
+675619.4301695337
+677513.7680513917
+679413.4173790881
+681318.3930451383
+683228.7099838151
+685144.3831712638
+687065.4276256213
+688991.8584071331
+690923.6906182709
+692860.9394038524
+694803.6199511583
+696751.7474900527
+698705.3372931019
+700664.404675694
+702628.9649961592
+704599.0336558905
+706574.6260994646
+708555.757814761
+710542.4443330867
+712534.7012292956
+714532.5441219109
+716535.9886732476
+718545.0505895364
+720559.7456210451
+722580.0895622036
+724606.0982517261
+726637.7875727377
+728675.1734528969
+730718.27186452
+732767.098824709
+734821.6703954737
+736882.0026838613
+738948.1118420796
+741020.0140676248
+743097.7256034091
+745181.2627378877
+747270.6418051843
+749365.8791852234
+751466.9913038552
+753573.9946329863
+755686.9056907073
+757805.7410414234
+759930.5172959843
+762061.251111814
+764197.9591930406
+766340.6582906297
+768489.3652025129
+770644.0967737212
+772804.8698965168
+774971.7015105245
+777144.6086028662
+779323.6082082925
+781508.7174093177
+783699.9533363532
+785897.3331678403
+788100.8741303864
+790310.5934989012
+792526.5085967288
+794748.6367957869
+796976.9955167011
+799211.6022289414
+801452.4744509596
+803699.6297503272
+805953.0857438726
+808212.8600978188
+810478.9705279225
+812751.4347996128
+815030.2707281307
+817315.4961786682
+819607.1290665091
+821905.1873571683
+824209.6890665338
+826520.6522610073
+828838.0950576467
+831162.0356243073
+833492.4921797828
+835829.4829939516
+838173.0263879179
+840523.1407341555
+842879.844456651
+845243.1560310503
+847613.0939848019
+849989.6768973024
+852372.9234000427
+854762.8521767524
+857159.4819635496
+859562.8315490843
+861972.9197746876
+864389.7655345186
+866813.3877757139
+869243.8054985331
+871681.0377565115
+874125.103656607
+876576.0223593509
+879033.8130789979
+881498.4950836754
+883970.0876955378
+886448.6102909151
+888934.0823004647
+891426.5232093263
+893925.9525572724
+896432.389938862
+898945.8550035943
+901466.3674560634
+903993.9470561118
+906528.613618986
+909070.3870154906
+911619.2871721458
+914175.334071343
+916738.5477515013
+919308.9483072248
+921886.5558894586
+924471.390705649
+927063.4730199015
+929662.8231531383
+932269.4614832586
+934883.408445299
+937504.6845315925
+940133.3102919292
+942769.306333718
+945412.6933221479
+948063.4919803509
+950721.7230895628
+953387.4074892879
+956060.5660774591
+958741.2198106066
+961429.3897040186
+964125.096831907
+966828.3623275728
+969539.2073835713
+972257.6532518797
+974983.721244062
+977717.4327314354
+980458.8091452414
+983207.8719768105
+985964.6427777322
+988729.1431600227
+991501.3947962954
+994281.4194199304
+997069.2388252458
+999864.8748676664
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here we initialize the total population to be 50, then set the growth factor as 1.00005 (.005 percent change). It will print the population every 56th day until it reaches one million. It multiplies the current population by the growth factor in each iteration, and increments the day count. When the day count reaches 56, it prints the current population and resets the day count to 0.</p>
+<p>Note! This simulation assumes that the growth factor remains constant as time progresses, which may not be a realistic assumption in real-world scenarios.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define the initial population and growth rate</span>
+<span class="n">population</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">growth_rate</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="c1"># Define the number of years to simulate</span>
+<span class="n">num_years</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># Create lists to store the population and year values</span>
+<span class="n">populations</span> <span class="o">=</span> <span class="p">[</span><span class="n">population</span><span class="p">]</span>
+<span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Simulate population growth for the specified number of years</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_years</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># Calculate the new population size</span>
+    <span class="n">new_population</span> <span class="o">=</span> <span class="n">population</span> <span class="o">+</span> <span class="p">(</span><span class="n">growth_rate</span> <span class="o">*</span> <span class="n">population</span><span class="p">)</span>
+    <span class="c1"># Update the population and year lists</span>
+    <span class="n">populations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_population</span><span class="p">)</span>
+    <span class="n">years</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+    <span class="c1"># Set the new population as the current population for the next iteration</span>
+    <span class="n">population</span> <span class="o">=</span> <span class="n">new_population</span>
+    
+<span class="c1"># Plot the population growth over time</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">populations</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Population'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Population Growth Simulation'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we create quantative data, we can plot it using the <a href="https://matplotlib.org/">Matplotlib library</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example-on-how-simplification-can-cause-bias">
+<a class="anchor" href="#Example-on-how-simplification-can-cause-bias" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example on how simplification can cause bias<a class="anchor-link" href="#Example-on-how-simplification-can-cause-bias"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">beak</span> <span class="o">=</span>  <span class="p">[</span><span class="s2">"small-beak"</span><span class="p">,</span> <span class="s2">"long-beak"</span><span class="p">,</span> <span class="s2">"medium-beak"</span><span class="p">],</span>
+<span class="n">wing</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"small-wings"</span><span class="p">,</span> <span class="s2">"large-wings"</span><span class="p">,</span> <span class="s2">"medium-wings"</span><span class="p">],</span>
+<span class="n">height</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"short"</span><span class="p">,</span> <span class="s2">"tall"</span><span class="p">,</span><span class="s2">"medium"</span><span class="p">]</span>
+
+
+<span class="n">naturaldisaster</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"flood"</span><span class="p">,</span> <span class="s2">"drought"</span><span class="p">,</span> <span class="s2">"fire"</span><span class="p">,</span> <span class="s2">"hurricane"</span><span class="p">,</span> <span class="s2">"dustbowl"</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"When a"</span> <span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">naturaldisaster</span><span class="p">)</span> <span class="p">,</span> <span class="s2">"hit"</span><span class="p">,</span>  <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">height</span><span class="p">),</span> <span class="s2">"birds died"</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>When a flood hit short birds died
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How does this simulation have bias?</p>
+<p>This simulation only shows how many birds died due to a natural disaster even though birds can die due to other causes. Not to mention there is no corelation between natural disasters and the height of birds.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="JS-examples">
+<a class="anchor" href="#JS-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>JS examples<a class="anchor-link" href="#JS-examples"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://shruthim0.github.io/canada/diceroll/">Dice Roll</a>
+<a href="https://shruthim0.github.io/canada/2023/04/13/Coin-Flip.html">Binary Coin Flip</a>
+<a href="https://shruthim0.github.io/canada/2023/04/16/Card-Pull.html">Card Pull</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Answer all questions and prompts in the notes (0.2)</li>
+<li>Create a simulation<ol>
+<li>Create a simulation that uses iteration and some form of data collection (list, dictionary...) (0.4)<ul>
+<li>try creating quantative data and using the Matplotlib library to display said data </li>
+<li>Comment and describe function of each parts</li>
+<li>How does your simulation help solve/mimic a real world problem?</li>
+<li>Is there any bias in your simulation? Meaning, are there any discrepancies between your program and the real event?</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Answer these <a href="https://shruthim0.github.io/canada/2023/04/03/simulationsplanning2.html">simulation questions</a> (0.3)</li>
+<li>Bonus: take a real world event and make a pseudocode representation or pseudocode on a flowchart of how you would make a simulation for it (up to +0.1 bonus)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Simulation-Questions">
+<a class="anchor" href="#Simulation-Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulation Questions<a class="anchor-link" href="#Simulation-Questions"> </a>
+</h2>
+<p>1.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Random-IGN/Fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Fastpages/student/2023/04/25/P3M-Simulations.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://random-ign.github.io/Fastpages//Fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>The website of an APCSP student.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/Random-IGN" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Fastpages/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
