@@ -123,6 +123,7 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
 <li class="toc-entry toc-h2"><a href="#Simulation-Questions">Simulation Questions </a></li>
+<li class="toc-entry toc-h2"><a href="#Bonus">Bonus </a></li>
 </ul>
 </li>
 </ul><!--
@@ -4551,6 +4552,27 @@ Number of red: 3
 <p>This shows a simulation of how planets (specifically Earth) move around the sun over the course of a year and this makes it easier to predict where the planet will be on a given day. If used for other planets this can be used to help with launching rockets since it can tell where and when the rocket should be launched to ensure that it will land.</p>
 <p><strong>Is there any bias in your simulation? Meaning, are there any discrepancies between your program and the real event?</strong></p>
 <p>There may be some bias since this event has been simplified making it so that every possibility isn't accounted for.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Bonus">
+<a class="anchor" href="#Bonus" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bonus<a class="anchor-link" href="#Bonus"> </a>
+</h2>
+<p>The psudocode below is used to simulate a dice roll to see the probability of getting a certain side in an x amount of dice rolls</p>
+<p><code>diceRolls &lt;-- INPUT()</code></p>
+<p><code>value &lt;-- INPUT()</code></p>
+<p><code>REPEAT diceRolls TIMES {</code></p>
+<p><code>roll ← RANDOM(1, 6)</code></p>
+<p><code>IF (roll = value) {</code></p>
+<p><code>countOfValue ← countOfValue + 1</code></p>
+<p><code>}</code></p>
+<p><code>}</code>
+<code>probabilityOfSide &lt;-- countOfValue/diceRolls</code></p>
+<p><code>DISPLAY(probabilityOfSide)</code></p>
 
 </div>
 </div>
